@@ -1,0 +1,107 @@
+.main{
+    width: 85%;
+    margin:auto;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.az{
+    width: 100%;
+  
+    height: 500px;
+}
+.main-content{
+    display: flex;
+    align-items: center;
+  justify-content: space-between;
+    height: 50px;
+}
+.main-content h1{
+  font-size: 35px;
+  color: #62A7F3;
+
+ 
+  letter-spacing: 8px;
+}
+.daha{
+   margin-right: 10px;
+    padding: 8px;
+    background-color:#62A7F3 ;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.xett{
+    background-color: #d4d1d1;
+    width: 300px;
+    opacity: 0.5;
+    border-radius:2px;
+    border: 3px solid #d4d1d1;
+}
+.cards{
+    margin-top: 20px;
+    margin-bottom: 82px;
+ padding: 20px;
+    
+    border: 1px solid rgb(196, 193, 193);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.card{
+padding-top: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 190px;
+    height: 350px;
+   cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    
+}
+.card-img{
+   
+    width: 165px;
+    height: 220px;
+    border-radius: 5px;
+}
+.card-img img{
+    width: 190px;
+    height: 220px;
+    border-radius: 5px;
+}
+.heart{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.heart img{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.card-context{
+    margin-top: 10px;
+    text-align: center;
+    color: #62A7F3;
+    font-size: 15px;
+    font-weight: 500;
+}
+.price{
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    color: #62A7F3;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.price img{
+    width: 24px;
+    height: 24px;
+cursor: pointer;
+}
