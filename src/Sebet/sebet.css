@@ -110,6 +110,7 @@ th {
     margin-top: 40px;
     width: 75%;
     margin: 0 auto;
+    display: flex;
 }
 .sifaris-left{
     width: 50%;
@@ -132,7 +133,7 @@ label span{
     margin-left: 5px;
     color: #E8AE1E;
 }
-.sifaris-left input{
+.sifaris-left input,select,textarea{
     width: 86%;
     margin-top: 9px;
     padding: 10px;
@@ -140,9 +141,18 @@ label span{
     border: none;
     font-size: 20px;
     border-radius: 10px;
-    color: rgb(15, 124, 241);
+    color: black;
 }
-.sifaris-left input::placeholder{
+select:focus{
+    outline-color: #E8AE1E;
+}
+a:focus,li:focus,ul:focus,div:focus{
+    outline: 1px solid #E8AE1E;
+}
+input:focus,textarea:focus{
+    outline: 1px solid #E8AE1E;
+}
+.sifaris-left input::placeholder,select,textarea::placeholder{
     font-size: 15px;
     color: rgb(15, 124, 241);
 }
@@ -151,4 +161,22 @@ label span{
 }
 .ad-soyad input{
     width: 80%;
+}
+.son{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cat,.son button{
+    margin-top: 9px;
+    cursor: pointer;
+    padding: 10px;
+    background-color:#E8AE1E;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.5s;
+}
+.cat:hover,.son button:hover{
+    background-color: #0F7CF1;
 }

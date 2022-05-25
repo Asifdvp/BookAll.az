@@ -1,7 +1,8 @@
 import React from 'react';
 import "./sebet.css";
 import sebet from "./sebet.png"
-import sebet2 from "./2.jpg"
+import sebet2 from "./2.jpg";
+import logo from './logo.svg'
 export default class Sebet extends React.Component{
     render(){
        return(
@@ -65,21 +66,55 @@ export default class Sebet extends React.Component{
     <div className='ad-soyad'> 
     <label htmlFor='name'>Adınız<span>*</span>  <input name='name'  placeholder='Adınızı daxil edin'/> </label>
         
-<label htmlFor='name' >Soyadınız<span>*</span> <input name='name' placeholder='Soyadınızı daxil edin'/> </label>
+<label htmlFor='surname' >Soyadınız<span>*</span> <input name='surname' placeholder='Soyadınızı daxil edin'/> </label>
 
     </div>
 
-<label htmlFor='name'>Ata Adı<span>*</span>  </label>
-<input name='name' placeholder='Ata adınızı daxil edin'/>
-<label htmlFor='name'>Çatdırılma yeri (Şəhər, rayon, metro, poçt və s.) <span>*</span>  </label>
-<input name='name' placeholder='Ata adınızı daxil edin'/>
-<label htmlFor='name'>Əlaqə Nömrəsi<span>*</span>  </label>
-<input name='name' placeholder='Əlaqə nömrənizi daxil edin'/>
+<label htmlFor='surname'>Ata Adı<span>*</span>  </label>
+<input name='surname' placeholder='Ata adınızı daxil edin'/>
+
+<label htmlFor='phone'>Əlaqə Nömrəsi<span>*</span>  </label>
+<input name='phone' type="phone" placeholder='Əlaqə nömrənizi daxil edin'/>
+
+<label htmlFor='name'>Sifarişi Götürəcəm<span>*</span> </label>
+<select> 
+    <option>Mağazadan Götürəcəm </option>
+   
+    <option>Ünvana Çatdırılma 5 AZN </option>
+    <option>Metroya Çatdırılma 2 AZN </option>
+</select>
+<label htmlFor='name'>Çatdırılma yeri (Şəhər, rayon, metro, poçt və s.)<span>*</span>  </label>
+<input name='name' placeholder='Ünvanı daxil edin '/>
+<label htmlFor='name'>Əlavə Qeydləriniz<span>*</span>  </label>
+<textarea name='name' placeholder='Qeydlərinizi daxil edin'/>
+
+
 
 </form>
     </div>
 </div>
-<div className='sifaris-right'></div>
+
+
+<div className='sifaris-left'>
+<div className='sifaris-about'>
+<img src={logo} alt="logo"/>
+    <h1>Çatdırılma  Haqqında </h1>
+    <div className='right-about'>
+<p>  Çatdırılma bizim kuryer xidməti tərəfindən, sifariş daxil olandan dərhal sonra, 24 saat ərzində həyata keçirilir. Biz istirahət günləri də daxil olmaqla, hər gün saat 10:00-dan 22:00-dək sifarişləri çatdırırıq. Bizim kuryerlər bağlamanın çatdırılma gününü və vaxtını təyin etmək, eləcə də ünvanı dəqiqləşdirmək üçün sifarişin qeydiyyatında göstərdiyiniz telefona zəng edib, sizinlə əlaqə saxlayacaqlar. 
+ </p>
+        </div>
+
+   <h1 style={{marginTop:"20px"}}>Ödənişi necə etmək? </h1>
+   <div className='right-about'>
+<p>   Siz sifarişi aldığınız zaman pulu nağd şəkildə kuryerə ödəyirsiniz. Sizə sifarişlə birlikdə əldə etdiyiniz mal haqqında bütün məlumatların qeyd olunduğu qəbz verilir.</p>
+        </div>
+    </div>
+    <div className='son'>
+<div className='cat'>Cəmi: 18.88 AZN </div>
+<button type='button'>Sifarişi Təsdiqlə
+ </button>
+</div>
+</div>
 
 </div>
     </section>
