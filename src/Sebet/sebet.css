@@ -1,0 +1,154 @@
+.sebet-section {
+    margin-top: 50px;
+    height: 600px;
+}
+
+.sebet-container {
+    width: 79%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 12px;
+}
+
+table {
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-top: 0;
+    width: 100%;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bas {
+    background-color: #E8AE1E;
+    padding: 12px;
+    border-radius: 10px
+}
+
+th {
+
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    margin-left: 15px;
+}
+
+th:nth-child(1) {
+    padding-left: 15px;
+}
+
+td {
+    padding-top: 12px;
+    color: #0F7CF1;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sebet-div tr td img {
+    width: 90px;
+    border-radius: 5px;
+    height: 130px;
+}
+
+td,
+th {
+    text-align: center;
+}
+
+.mehsul-name {
+    padding-left: 15px;
+}
+
+.mehsul-text {
+    width: 200px;
+}
+
+.mehsul-qiymet {
+    width: 100px;
+}
+
+.mehsul-say {
+    width: 60px !important;
+}
+
+.mehsul-say input {
+    box-sizing: border-box;
+    padding: 6px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #0F7CF1;
+    border: none;
+    width: 60px !important;
+}
+
+.mehsul-cem {
+    width: 100px;
+}
+
+.mehsul-remove {
+    width: 100px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.xett {
+    margin-top: 10px;
+    width: 100%;
+    height: 2px;
+    border: none;
+    color: #E8AE1E;
+    background-color: #E8AE1E;
+}
+.sifaris{
+    margin-top: 40px;
+    width: 75%;
+    margin: 0 auto;
+}
+.sifaris-left{
+    width: 50%;
+}
+.sifaris-left h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+input,label{
+    display: block;
+}
+label{
+    margin-top: 10px;
+    font-size: 20px;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+label span{
+    margin-left: 5px;
+    color: #E8AE1E;
+}
+.sifaris-left input{
+    width: 86%;
+    margin-top: 9px;
+    padding: 10px;
+    background-color:#f0f0e9;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    color: rgb(15, 124, 241);
+}
+.sifaris-left input::placeholder{
+    font-size: 15px;
+    color: rgb(15, 124, 241);
+}
+.ad-soyad{
+    display: flex;
+}
+.ad-soyad input{
+    width: 80%;
+}
