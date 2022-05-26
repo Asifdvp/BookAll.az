@@ -26,11 +26,17 @@ export default class Login extends Component{
      
     </div>
   
-    <button>Daxil Ol</button>
+   
+       <Link to="/user"> 
+       <button>
+        Daxil Ol 
+        </button>
+        </Link>
+    
   </form>
   <div className="yox">
       <p>Hesabın yoxdur?/
-        <Link to="/sign">Qeydiyyatdan Keç</Link>
+        <Link to="/sign" className="link">Qeydiyyatdan Keç</Link>
       </p>
       {/* <p>Qeydiyyatdan keç</p> */}
   </div>

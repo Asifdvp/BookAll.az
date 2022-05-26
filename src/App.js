@@ -10,6 +10,8 @@ import Product from './Product/Product';
 import Search from './Search/Search';
 import Sebet from './Sebet/Sebet';
 import Sign from './Sign/Sign';
+import Sifaris from './User/Sifaris';
+import User from './User/User';
 
 function App() {
   return (
@@ -18,9 +20,21 @@ function App() {
    
 
 <Routes>
-<Route path='/login' element={<Login/>}/> 
-<Route path='/sign' element={<Sign/>}/> 
-<Route path='/' element={ 
+<Route path='/login' element = {<Login/>}/> 
+<Route path='/sign' element = {<Sign/>}/> 
+<Route path='/product' element = {<Product/>}/>
+<Route path='/search' element = {<Search/>}/>
+<Route path='/sebet' element = {<Sebet/>}/>
+<Route path='/user' element = {<User/>}/>
+<Route path='/sifaris' element={
+  <>
+
+<Sifaris/>
+</>
+}/>
+
+  
+<Route path='/' element= { 
 <>
 <Carousel/>
 <Main/>

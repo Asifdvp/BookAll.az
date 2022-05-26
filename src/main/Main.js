@@ -20,7 +20,7 @@ import ttwo from "./turk/2.jpg";
 import tthree from "./turk/3.jpg";
 import tseven from "./turk/4.jpg";
 import tfive from "./turk/5.jpg";
-
+import { Link } from "react-router-dom";
 
 import ione from "./ingiils/1.jpg";
 import itwo from "./ingiils/2.jpg";
@@ -43,7 +43,9 @@ render(){
         </button>
     </div>
     <div className="cards">
-        <div className="card">
+   
+   <Link to="product"> 
+   <div className="card">
 <div className="card-img">
     <img alt="img" className="cardi" src={three} />
     <div className="heart">
@@ -61,6 +63,11 @@ render(){
 </div>
 
         </div>
+    </Link>
+    
+
+
+
         <div className="card">
 <div className="card-img">
     <img alt="img" className="cardi" src={two} />

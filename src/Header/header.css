@@ -5,14 +5,7 @@
     list-style: none;
     text-decoration: none;
 }
-.header{
-    /* background-color: red; */
- 
-  /* padding-left:140px; */
-  /* padding-top: 31px; */
-  /* padding-right: 140px; */
 
-}
 .text{
     width: 100%;
     text-align: center;
@@ -118,6 +111,7 @@ transition: all 0.5s;
     align-items: center;
     justify-content: space-between;
 }
+
 .menu ul{
     display: flex;
 }

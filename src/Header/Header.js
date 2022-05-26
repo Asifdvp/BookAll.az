@@ -35,11 +35,15 @@ return(
 
 <section className="head">
     <div className="logo-div">
-       <img alt="logo" src={logo} className="logo"/>
+    <Link to="/">
+    <img alt="logo" src={logo} className="logo"/>
+         </Link>   
     </div>
     <div className="search">
         <input className="search-input" placeholder="Axtardığınız kitabı daxil edin"/>
-      <img src={loupe} alt="lupa" className="lupa"/>
+    <Link to="/search" style={{
+        "margin-top":"-17px"
+    }}> <img src={loupe} alt="lupa" className="lupa"/> </Link>
     </div>
     <div className="account"><img src={user} alt="login" className="login"/>
    <Link to="/login">Giriş </Link>/
@@ -91,8 +95,10 @@ return(
     </div>
 
     <div className="sebet">  
-    <img className="sebet-img" src={sebet} alt="sebet"/>
-    Səbət</div>
+ <Link to="/sebet" className="sebet">
+ <img className="sebet-img" src={sebet} alt="sebet"/>
+    Səbət
+      </Link>  </div>
 </section>
 
 

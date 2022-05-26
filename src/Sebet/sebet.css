@@ -1,6 +1,8 @@
 .sebet-section {
     margin-top: 50px;
     height: 600px;
+    margin-bottom: 500px;
+  
 }
 
 .sebet-container {
@@ -159,6 +161,9 @@ input:focus,textarea:focus{
 }
 .ad-soyad input{
     width: 80%;
+}
+.sifaris-about img{
+width: 130%;
 }
 .son{
     display: flex;
