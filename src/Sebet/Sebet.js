@@ -30,7 +30,7 @@ export default class Sebet extends React.Component{
 <td className='mehsul-remove'> X</td>
 
     </tr>
-<tr className='xett'> 
+<tr className='xettb'> 
     <td> <hr/></td>
 </tr>
 
@@ -48,7 +48,7 @@ export default class Sebet extends React.Component{
   
   
     </tr>
-<tr className='xett'> 
+<tr className='xettb'> 
     <td> <hr/></td>
 </tr>
 </tbody>
@@ -111,7 +111,7 @@ export default class Sebet extends React.Component{
     </div>
     <div className='son'>
 <div className='cat'>Cəmi: 18.88 AZN </div>
-<button type='button'>Sifarişi Təsdiqlə
+<button type='button' className='sonb'>Sifarişi Təsdiqlə
  </button>
 </div>
 </div>

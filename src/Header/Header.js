@@ -5,6 +5,7 @@ import loupe from './loupe.png';
 import user from './user.svg';
 import sebet from './sebet.svg';
 import Category from './category.json'
+import { Link } from "react-router-dom";
 export default class Header extends Component{
     state = {
 data:[]        
@@ -40,12 +41,17 @@ return(
         <input className="search-input" placeholder="Axtardığınız kitabı daxil edin"/>
       <img src={loupe} alt="lupa" className="lupa"/>
     </div>
-    <div className="account"><img src={user} alt="login" className="login"/>Daxil Ol</div>
+    <div className="account"><img src={user} alt="login" className="login"/>
+   <Link to="/login">Giriş </Link>/
+   <Link to="/sign">Qeydiyyat  </Link>
+   
+    
+    </div>
 </section>
 <section className="navbar">
     <div className="menu">
 <ul>
-    <li><a href="#">Ana Səhifə</a>
+    <li><Link to="/">Ana Səhifə </Link>
     </li>
     <li><a href="#" className="janr">Nəşrlər</a>
     <ul >
