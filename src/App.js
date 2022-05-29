@@ -10,8 +10,11 @@ import Product from './Product/Product';
 import Search from './Search/Search';
 import Sebet from './Sebet/Sebet';
 import Sign from './Sign/Sign';
+import Elan from './User/Elan';
+import Hesab from './User/hesab';
 import Sifaris from './User/Sifaris';
 import User from './User/User';
+import Yeni from './User/yeni';
 
 function App() {
   return (
@@ -26,14 +29,17 @@ function App() {
 <Route path='/search' element = {<Search/>}/>
 <Route path='/sebet' element = {<Sebet/>}/>
 <Route path='/user' element = {<User/>}/>
+<Route path='/elan' element = {<Elan/>}/>
 <Route path='/sifaris' element={
   <>
-
 <Sifaris/>
+
+
 </>
 }/>
 
-  
+<Route path='/yeni' element = {<Yeni/>}/>
+<Route path='/hesab' element = {<Hesab/>}/>
 <Route path='/' element= { 
 <>
 <Carousel/>

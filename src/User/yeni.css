@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+.yeni-section{
+    padding: 60px;
+    width: 60%;
+   margin: 0 auto;
+}
+
+.headerY {
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #E8AE1E;
+  padding: 20px 40px;
+  color: white;
+}
+
+.a{
+    background-color: #E8AE1E !important;
+    border: 2px solid #E8AE1E !important;
+}

@@ -44,6 +44,16 @@ height: 15  0px;
 
 }
 .sifaris-div .sebet-div{
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
+}
+.new_mehsul{
+  color: white;
+  cursor: pointer;
+  width: 200px;
+  margin-top: 20px;
+ margin-left: 20px;
+}
+.ag{
+  color: white;
 }

@@ -25,15 +25,15 @@ return(
        
    </li>
     <li>
-        <Link to="sifaris">Elanla </Link>
+        <Link to="/elan">Elanlar </Link>
        
    </li>
     <li>
-        <Link to="sifaris">Hesab Detalları</Link>
+        <Link to="/hesab">Hesab Detalları</Link>
        
    </li>
     <li>
-        <Link to="sifaris">Çıxış</Link>   
+        <Link to="/login">Çıxış</Link>   
    </li>
     
 </ul>
