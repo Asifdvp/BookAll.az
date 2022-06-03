@@ -1,15 +1,17 @@
 import React,{Component} from "react";
 import "./main.css"
-import one from "./1.jpg";
-import two from "./2.jpg";
-import three from "./3.jpg";
-import seven from "./7.jpg";
-import five from "./5.jpg";
-import eight from "./8.jpg";
-import nine from "./9.jpg";
-import six from "./6.jpg";
-import ten from "./10.jpg";
-import eleven from "./11.jpg";
+
+//Azerbaycan bolmesi 
+import one from "./azerbaycan/1.jpg";
+import two from "./azerbaycan/2.jpg";
+import three from "./azerbaycan/3.jpg";
+import four from "./azerbaycan/4.jpg";
+import five from "./azerbaycan/5.jpg";
+
+
+
+//turk bolmesi
+
 import like from "./like.png";
 import sebet from "./sebet.svg"
 
@@ -20,6 +22,8 @@ import ttwo from "./turk/2.jpg";
 import tthree from "./turk/3.jpg";
 import tseven from "./turk/4.jpg";
 import tfive from "./turk/5.jpg";
+
+
 import { Link } from "react-router-dom";
 
 import ione from "./ingiils/1.jpg";
@@ -47,15 +51,15 @@ render(){
    <Link to="product"> 
    <div className="card">
 <div className="card-img">
-    <img alt="img" className="cardi" src={three} />
+    <img alt="img" className="cardi" src={one} />
     <div className="heart">
         <img src={like} alt="like"/>
     </div>
 </div>
 <div className="card-context">
-    <p>Yay tapşırıqları,
+    <p>Malva,
         <br/>
-        Orxan Bəyov</p>
+       Maksim Qorki</p>
 </div>
 <div className="price">
     3.25 AZN
@@ -64,10 +68,7 @@ render(){
 
         </div>
     </Link>
-    
-
-
-
+    <Link to="product"> 
         <div className="card">
 <div className="card-img">
     <img alt="img" className="cardi" src={two} />
@@ -76,62 +77,71 @@ render(){
     </div>
 </div>
 <div className="card-context">
-    <p>Dostlar Məntiq öyrənir</p>
+    <p>Cen Eyşan <br/>
+        13 Səbəb </p>
 </div>
 <div className="price">
-    2.99 AZN
+   6.8 AZN
 <img src={sebet} alt="sebet"/>
 </div>
 
         </div>
+        </Link>
+        <Link to="product">
         <div className="card">
 <div className="card-img">
-    <img alt="img" className="cardi" src={seven} />
+    <img alt="img" className="cardi" src={three} />
     <div className="heart">
         <img src={like} alt="like"/>
     </div>
 </div>
 <div className="card-context">
-    <p>Dostlar Riyaziyyat öyrənir</p>
+    <p>11.22.63 <br/> Stephen King</p>
 </div>
 <div className="price">
-    1.65 AZN
+    10.65 AZN
 <img src={sebet} alt="sebet"/>
 </div>
 
         </div>
+        </Link>
+        <Link to="product">
         <div className="card">
 <div className="card-img">
-    <img alt="img" className="cardi" src={eight} />
+    <img alt="img" className="cardi" src={four} />
     <div className="heart">
         <img src={like} alt="like"/>
     </div>
 </div>
 <div className="card-context">
-    <p>Azərbaycan Dili <br/> Yarpaq Testi</p>
+    <p>Ağ Diş <br/> Jack London</p>
 </div>
 <div className="price">
-    3.10 AZN
+    8.10 AZN
 <img src={sebet} alt="sebet"/>
 </div>
 
         </div>
+        </Link>
+        <Link to="product">
         <div className="card">
 <div className="card-img">
-    <img alt="img" className="cardi" src={nine} />
+    <img alt="img" className="cardi" src={five} />
     <div className="heart">
         <img src={like} alt="like"/>
     </div>
 </div>
 <div className="card-context">
-    <p>Dünya Möcüzələri</p>
+    <p>Yad <br/>
+    Albert Camus</p>
 </div>
 <div className="price">
-    5.59 AZN
+    9.59 AZN
 <img src={sebet} alt="sebet"/>
 </div>
 
         </div>
+        </Link>
     </div>
 </section>
 <section className="az">
@@ -322,97 +332,6 @@ render(){
 <img src={sebet} alt="sebet"/>
 </div>
 
-        </div>
-    </div>
-</section>
-<section className="az">
-    <div className="main-content">
-        <div className="xett"></div>
-        <h1>Kirayə Kitablar</h1>
-        <div className="xett"></div>
-        <button type="button"  className="daha">
-            Daha Çox
-        </button>
-    </div>
-    <div className="cards">
-        <div className="card">
-<div className="card-img">
-    <img alt="img" className="cardi" src={one} />
-    <div className="heart">
-        <img src={like} alt="like"/>
-    </div>
-</div>
-<div className="card-context">
-    <p>Malva,Maksim Qorki</p>
-</div>
-<div className="price">
-0.10 AZN
-<img src={sebet} alt="sebet"/>
-</div>
-
-        </div>
-        <div className="card">
-<div className="card-img">
-    <img alt="img" className="cardi" src={five} />
-    <div className="heart">
-        <img src={like} alt="like"/>
-    </div>
-</div>
-<div className="card-context">
-    <p>Cey Eşer,13 Səbəb</p>
-</div>
-<div className="price">
-    0.10 AZN
-<img src={sebet} alt="sebet"/>
-</div>
-
-        </div>
-        <div className="card">
-<div className="card-img">
-    <img alt="img" className="cardi" src={six} />
-    <div className="heart">
-        <img src={like} alt="like"/>
-    </div>
-</div>
-<div className="card-context">
-    <p>Stephen King,11.22.63</p>
-</div>
-<div className="price">
-    0.10 AZN
-<img src={sebet} alt="sebet"/>
-</div>
-
-        </div>
-        <div className="card">
-<div className="card-img">
-    <img alt="img" className="cardi" src={ten} />
-    <div className="heart">
-        <img src={like} alt="like"/>
-    </div>
-</div>
-<div className="card-context">
-    <p>Albert Camus,Yad</p>
-</div>
-<div className="price">
-   0.10 AZN
-<img src={sebet} alt="sebet"/>
-</div>
-
-        </div>
-        <div className="card">
-<div className="card-img">
-    <img alt="img" className="cardi" src={eleven} />
-    <div className="heart">
-        <img src={like} alt="like"/>
-    </div>
-</div>
-<div className="card-context">
-    <p>Jack London,Ağ Diş</p>
-</div>
-<div className="price">
-   0.10 AZN
-<img src={sebet} alt="sebet"/>
-</div>
         </div>
     </div>
 </section>

@@ -1,0 +1,84 @@
+[
+    [
+        {
+            "id":"1",
+            "src": "./azerbaycan/1.jpg",
+            "work": "Malva",
+            "author": "Maksim Qorki",
+            "price": "3.25"
+        },
+        {
+            "id":"2",
+            "src": "./azerbaycan/2.jpg",
+            "work": "13 Səbəb",
+            "author": "Cey Eşer",
+            "price": "6.99"
+        },
+        {
+            "id":"3",
+            "src": "./azerbaycan/3.jpg",
+            "work": "11.22.63",
+            "author": "Stephen King",
+            "price": "3.25"
+        },
+        {
+            "id":"4",
+            "src": "./azerbaycan/4.jpg",
+            "work": "Malva",
+            "author": "Maksim Qorki",
+            "price": "3.25"
+        }
+    ],
+    [
+        {
+            "src": "./azerbaycan/1.jpg",
+            "work": "Malva",
+            "author": "Maksim Qorki",
+            "price": "3.25"
+        },
+        {
+            "src": "./azerbaycan/1.jpg",
+            "work": "Malva",
+            "author": "Maksim Qorki",
+            "price": "3.25"
+        },
+        {
+            "src": "./azerbaycan/1.jpg",
+            "work": "Malva",
+            "author": "Maksim Qorki",
+            "price": "3.25"
+        },
+        {
+            "src": "./azerbaycan/1.jpg",
+            "work": "Malva",
+            "author": "Maksim Qorki",
+            "price": "3.25"
+        }
+    ],
+    [
+        {
+            "src": "./azerbaycan/1.jpg",
+            "work": "Malva",
+            "author": "Maksim Qorki",
+            "price": "3.25"
+        },
+        {
+            "src": "./azerbaycan/1.jpg",
+            "work": "Malva",
+            "author": "Maksim Qorki",
+            "price": "3.25"
+        },
+        {
+            "src": "./azerbaycan/1.jpg",
+            "work": "Malva",
+            "author": "Maksim Qorki",
+            "price": "3.25"
+        },
+        {
+            "src": "./azerbaycan/1.jpg",
+            "work": "Malva",
+            "author": "Maksim Qorki",
+            "price": "3.25"
+        }
+    ]
+]
