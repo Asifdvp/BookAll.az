@@ -1,20 +1,5 @@
-.big-img{
-  position: relative;
-   height: 500px;
-   width: 100%;
-}
-.big-img img{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-.logo-car{
-    width: 50px !important;
-    height: 50px !important;
-    top: 28px;
-    left: 43px;
-    position: absolute;
-    object-fit: cover;
 
-    
+.carousel-img{
+    height: 639px !important;
+    width: 100%;
 }

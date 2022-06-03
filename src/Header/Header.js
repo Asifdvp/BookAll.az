@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import "./header.css";
 //photos
 import logo from "./header-img/apol.svg";
-import loupe from "./header-img/loupe.png";
 import sebet from "./header-img/sebet.svg";
 //json file
 import Category from "./category.json";
@@ -12,6 +11,7 @@ import { Link } from "react-router-dom";
 //React icons
 import { RiAccountCircleLine } from "@react-icons/all-files/ri/RiAccountCircleLine";
 import { BiSearchAlt2 } from "@react-icons/all-files/bi/BiSearchAlt2";
+import { AiOutlineArrowUp } from "@react-icons/all-files/ai/AiOutlineArrowUp";
 
 export default class Header extends Component {
   state = {
@@ -26,10 +26,45 @@ export default class Header extends Component {
         this.setState({ data: data });
       });
   };
+  componentDidMount(){
 
+    // Navbarin sticky olmasi ucundu bura
+let navbar = document.getElementById("navbar");
+let  sticky = navbar.offsetTop;
+var mybutton = document.getElementById("myBtn");
+    window.onscroll = function(){
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+        // bu hissede oxun block olmasi eger scroll olsa
+        mybutton.style.display = "block";
+
+// normalda eger scroll aşağı olubsa səhif
+
+let header = document.querySelector(".header")
+header.onclick = function (){
+    if (window.pageYOffset >= sticky) {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    } 
+  }
+      } else {
+        navbar.classList.remove("sticky");
+         // bu hissede oxun none olmasi eger scroll olmasa
+        mybutton.style.display = "none";
+      }
+    }
+  
+    }
+    handleClick() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
   render() {
     return (
       <section>
+      <button onClick={this.handleClick} id="myBtn" title="Yuxarıya">
+<AiOutlineArrowUp/>
+      </button>
         <div className="text">
           "Kitabsız bir ömrün nə mənası var."
           <div>
@@ -52,7 +87,7 @@ export default class Header extends Component {
               <Link
                 to="/search"
                 style={{
-                  "margin-top": "-17px",
+                  "marginTop": "-17px",
                 }}
               >
                <span><BiSearchAlt2 className="lupa"/></span> 
@@ -73,7 +108,7 @@ export default class Header extends Component {
               </Link>
             </div>
           </section>
-          <section className="navbar">
+          <section className="navbar" id="navbar">
             <div className="menu">
               <ul>
                 <li>
@@ -102,7 +137,6 @@ export default class Header extends Component {
                     </li>
                   </ul>
                 </li>
-
                 <li>
                   <Link to="/" className="janr">
                     Janrlar

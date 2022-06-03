@@ -4,6 +4,7 @@ import FooterJson from "./sifaris.json"
 import Haqqimizda from "./haqqimizda.json"
 import Hesabim from "./hesabim.json"
 import logo from "./apol.svg"
+import { Link } from "react-router-dom";
 export default class Footer extends Component {
     render(){
         return(
@@ -25,8 +26,8 @@ export default class Footer extends Component {
     <ul className="footer-column-menu" role="menu">
     {Haqqimizda.map(item =>{
             return(
-    <li className="footer-column-menu-item" role="menuitem">
-    <a href="#" key={item.name} className="footer-column-menu-item-link">{item.name}</a>
+    <li className="footer-column-menu-item" role="menuitem" >
+    <Link to="#" key={item.name} className="footer-column-menu-item-link">{item.name}</Link>
   </li>)
         })}
     </ul>
