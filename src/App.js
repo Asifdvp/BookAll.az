@@ -47,22 +47,7 @@ function App() {
 
 </>
 }   />
-
-
-
   </Routes>
-
-  
-   
-   
-   
-    {/* <Carousel/> 
-     <Main/> */}
-{/*  
-   <Sebet/> */}
-{/* <Search/> */}
-{/* <Login/> */}
-    {/* <Product/> */}
     <Footer/>
     </>
   );
