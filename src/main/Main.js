@@ -39,6 +39,25 @@ import { AiFillHeart } from "@react-icons/all-files/ai/AiFillHeart";
 
 export default class Main extends Component {
 
+    state = {
+        aze: [],
+        tr: [],
+        eng: []
+    }
+
+
+
+    getData = () => {
+        fetch('http://localhost:3000/aze/')
+            .then(res => res.json())
+            .then(data => this.setState({ aze: data }))
+    }
+
+
+    componentDidMount() {
+        this.getData();
+    }
+
     addToFavorite(e) {
 
         e.target.classList.toggle("heart-color")
@@ -81,7 +100,7 @@ export default class Main extends Component {
 
                         </div>
 
-                    
+
 
 
 
