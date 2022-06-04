@@ -182,7 +182,12 @@ height: 50px;
 .menu ul {
   display: flex;
   padding: 0;
+ 
   padding-left: 10px;
+}
+.ul1{
+  width: 600px;
+  justify-content: space-between;
 }
 a{
   margin: 0 !important;
@@ -233,7 +238,7 @@ a{
 ul li ul li a {
   transition: all 0.5s !important;
   display: block;
-  font-size: 18px !important;
+  font-size: 19px !important;
   padding: 10px !important;
   text-align: left;
   color: #e5a709 !important;

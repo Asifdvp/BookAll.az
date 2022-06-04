@@ -110,7 +110,7 @@ header.onclick = function (){
           </section>
           <section className="navbar" id="navbar">
             <div className="menu">
-              <ul>
+              <ul className="ul1">
                 <li>
                   <Link to="/">Ana Səhifə </Link>
                 </li>
@@ -150,15 +150,11 @@ header.onclick = function (){
                    
                   </ul>
                 </li>
-                <li>
-                  <a href="#">Kirayə Kitablar</a>
-                </li>
+                    
                 <li>
                   <a href="#">Haqqımızda</a>
                 </li>
-                <li>
-                  <a href="#">Əlaqə</a>
-                </li>
+              
               </ul>
             </div>
 
