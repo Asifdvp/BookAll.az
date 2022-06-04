@@ -33,26 +33,11 @@ import ifive from "./ingiils/5.jpg";
 
 // icons
 
+import { AiOutlineHeart } from "@react-icons/all-files/ai/AiOutlineHeart";
 import { AiFillHeart } from "@react-icons/all-files/ai/AiFillHeart";
 
 
 export default class Main extends Component {
-
-    state = {
-        data: []
-    }
-
-
-    getData = () => {
-        fetch('http://localhost:3000/publications')
-            .then(res => res.json())
-            .then(data => this.setState({ data: data }))
-    }
-
-
-    componentDidMount() {
-        this.getData()
-    }
 
     addToFavorite(e) {
 
@@ -60,7 +45,7 @@ export default class Main extends Component {
     }
     render() {
 
-        console.log(this.state.data)
+
         return (
             <section className="main">
                 <section className="az">
@@ -74,8 +59,6 @@ export default class Main extends Component {
                     </div>
                     <div className="cards">
 
-                        
-                   
                         <div className="card">
                             <div className="card-img">
                                 <img alt="img" className="cardi" src={one} />
@@ -92,104 +75,19 @@ export default class Main extends Component {
                                 </div>
                             </Link>
                             <div className="price">
-                                3 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
-
-                        {/* <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={two} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
                                 3.25 AZN
                                 <img src={sebet} alt="sebet" />
                             </div>
 
                         </div>
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={three} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
 
-                        </div>
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={four} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={five} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div> */}
-
+                    
 
 
 
 
                     </div>
                 </section>
-
-
-
-
-
                 <section className="az">
                     <div className="main-content">
                         <div className="xett"></div>
