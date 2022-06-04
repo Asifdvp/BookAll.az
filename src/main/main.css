@@ -82,12 +82,15 @@ padding-top: 10px;
     position: absolute;
     width: 28px;
     height: 28px;
-    right: 10px;
-    top: 10px;
-    color: #d4d1d1;
+    right: 20px;
+    top: 20px;
+    color: #bab7b7;
     font-weight: bold;
   
     cursor: pointer;
+}
+.heart-color{
+  color: #e8ae1e;  
 }
 .heart img{
     width: 24px;
