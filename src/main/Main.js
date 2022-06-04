@@ -75,7 +75,7 @@ export default class Main extends Component {
                     <div className="cards">
 
                         
-
+                   
                         <div className="card">
                             <div className="card-img">
                                 <img alt="img" className="cardi" src={one} />
