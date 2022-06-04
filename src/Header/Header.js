@@ -62,7 +62,7 @@ header.onclick = function (){
   render() {
     return (
       <section>
-      <button onClick={this.handleClick} id="myBtn" title="Yuxarıya">
+      <button onClick={this.handleClick} id="myBtn" >
 <AiOutlineArrowUp/>
       </button>
         <div className="text">
@@ -136,23 +136,14 @@ header.onclick = function (){
                 </li>
                 <li>
                   <Link to="/" className="janr">
-                    Janrlar
+                  Çox Satılanlar
                   </Link>
-                  <ul>
-                    {Category.map((item) => {
-                      return (
-                        <li key={item.name}>
-                          {" "}
-                          <Link to="/"> {item.name} </Link>{" "}
-                        </li>
-                      );
-                    })}
-                   
-                  </ul>
+               
                 </li>
                     
                 <li>
-                  <a href="#">Haqqımızda</a>
+                <Link to="about" className="janr">
+                 Haqqımızda</Link>
                 </li>
               
               </ul>

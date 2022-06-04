@@ -12,10 +12,8 @@ import five from "./azerbaycan/5.png";
 
 //turk bolmesi
 
-import like from "./like.png";
+
 import sebet from "./sebet.svg"
-
-
 
 import tone from "./turk/1.jpg";
 import ttwo from "./turk/2.jpg";
@@ -35,7 +33,6 @@ import ifive from "./ingiils/5.jpg";
 
 // icons
 
-import {AiOutlineHeart} from "@react-icons/all-files/ai/AiOutlineHeart";
 import {AiFillHeart} from "@react-icons/all-files/ai/AiFillHeart";
 
 
@@ -77,7 +74,7 @@ render(){
 </div>
 </Link>
 <div className="price">
-    3.25 AZN
+    3 AZN
 <img src={sebet} alt="sebet"/>
 </div>
 
