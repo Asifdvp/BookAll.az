@@ -42,5 +42,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "<!-- React icons -->\r <!-- Installation -->",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asifdvp/Apollo.az.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asifdvp/Apollo.az/issues"
+  },
+  "homepage": "https://github.com/Asifdvp/Apollo.az#readme"
 }
