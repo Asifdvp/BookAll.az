@@ -3,10 +3,10 @@ import "./main.css"
 
 //Azerbaycan bolmesi 
 import one from "./azerbaycan/1.jpg";
-import two from "./azerbaycan/2.jpg";
+import two from "./azerbaycan/2.png";
 import three from "./azerbaycan/3.jpg";
 import four from "./azerbaycan/4.jpg";
-import five from "./azerbaycan/5.jpg";
+import five from "./azerbaycan/5.png";
 
 
 
@@ -33,8 +33,20 @@ import iseven from "./ingiils/4.jpg";
 import ifive from "./ingiils/5.jpg";
 
 
+// icons
+
+import {AiOutlineHeart} from "@react-icons/all-files/ai/AiOutlineHeart";
+import {AiFillHeart} from "@react-icons/all-files/ai/AiFillHeart";
+
+
 export default class Main extends Component {
 render(){
+    // state={
+
+    // }
+    // addToFavorite(){
+        
+    // }
     return(
         <section className="main">
 <section className="az">
@@ -48,32 +60,37 @@ render(){
     </div>
     <div className="cards">
    
-   <Link to="product"> 
+   
    <div className="card">
 <div className="card-img">
     <img alt="img" className="cardi" src={one} />
     <div className="heart">
-        <img src={like} alt="like"/>
+    <AiFillHeart className="heart" />
     </div>
 </div>
+<Link to="product"> 
 <div className="card-context">
     <p>Malva,
         <br/>
        Maksim Qorki</p>
 </div>
+</Link>
 <div className="price">
     3.25 AZN
 <img src={sebet} alt="sebet"/>
 </div>
 
         </div>
-    </Link>
+   
+  
+  
+  
     <Link to="product"> 
         <div className="card">
 <div className="card-img">
     <img alt="img" className="cardi" src={two} />
     <div className="heart">
-        <img src={like} alt="like"/>
+    <AiOutlineHeart className="heart"/>
     </div>
 </div>
 <div className="card-context">
@@ -92,7 +109,7 @@ render(){
 <div className="card-img">
     <img alt="img" className="cardi" src={three} />
     <div className="heart">
-        <img src={like} alt="like"/>
+    <AiOutlineHeart className="heart"/>
     </div>
 </div>
 <div className="card-context">
@@ -110,7 +127,7 @@ render(){
 <div className="card-img">
     <img alt="img" className="cardi" src={four} />
     <div className="heart">
-        <img src={like} alt="like"/>
+    <AiOutlineHeart className="heart"/>
     </div>
 </div>
 <div className="card-context">
@@ -128,7 +145,7 @@ render(){
 <div className="card-img">
     <img alt="img" className="cardi" src={five} />
     <div className="heart">
-        <img src={like} alt="like"/>
+         <AiOutlineHeart className="heart"/>
     </div>
 </div>
 <div className="card-context">
@@ -158,7 +175,7 @@ render(){
 <div className="card-img">
     <img alt="img" className="cardi" src={tthree} />
     <div className="heart">
-        <img src={like} alt="like"/>
+    <AiOutlineHeart className="heart"/>
     </div>
 </div>
 <div className="card-context">

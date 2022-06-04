@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./carpusel.css"
+import "./carousel.css"
 import one from "./carousel-img/1.PNG"
 import two from "./carousel-img/2.png"
 import three from "./carousel-img/3.PNG"
@@ -11,8 +11,8 @@ export default class Carousel1 extends Component {
     render(){
         return(
             <section className="carousel">
-<Carousel>
-  <Carousel.Item  interval={2000}>
+<Carousel touch={true} prevIcon={false} nextIcon={false}>
+  <Carousel.Item  interval={2000} >
     <img
       className="d-block carousel-img"
       src={one}

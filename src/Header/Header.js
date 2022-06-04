@@ -127,10 +127,7 @@ header.onclick = function (){
                       {" "}
                       <Link to="/">Türk </Link>
                     </li>
-                    <li>
-                      {" "}
-                      <Link to="/">Rus </Link>
-                    </li>
+                  
                     <li>
                       {" "}
                       <Link to="/">İngilis </Link>
