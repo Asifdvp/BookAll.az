@@ -121,7 +121,7 @@ header.onclick = function (){
                   <ul>
                     <li>
                       {" "}
-                      <Link to="/">Azərbaycan</Link>{" "}
+                      <Link to="/aze">Azərbaycan</Link>{" "}
                     </li>
                     <li>
                       {" "}

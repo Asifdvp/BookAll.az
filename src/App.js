@@ -16,6 +16,7 @@ import Hesab from './User/hesab';
 import Sifaris from './User/Sifaris';
 import User from './User/User';
 import Yeni from './User/yeni';
+import Aze from './Components/puplications/Aze';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
 
 <Routes>
 <Route path='/login' element = {<Login/>}/> 
+<Route path='/aze' element = {<Aze/>}/> 
 <Route path='/about' element = {<About/>}/> 
 <Route path='/sign' element = {<Sign/>}/> 
 <Route path='/product' element = {<Product/>}/>
