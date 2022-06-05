@@ -15,7 +15,7 @@ export default class All extends React.Component{
     componentDidMount() {
        store.subscribe(()=>{
            const state =store.getState();
-           this.setState({all:state.nesr[0]},()=>{
+           this.setState({all:state.nesr[state.nesr.length - 1]},()=>{
                console.log(this.state.all.length)    
            })
        })

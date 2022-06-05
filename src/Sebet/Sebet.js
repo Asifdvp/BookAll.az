@@ -9,7 +9,9 @@ const [cartGoods,getData] = useState([store.getState().cart]);
 useEffect(()=>{
     store.subscribe(()=>{
         const state = store.getState();
-        getData(state.cart)
+        getData(state.cart,()=>{
+            console.log(cartGoods)
+        })
     })
 })
 

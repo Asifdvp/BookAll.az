@@ -133,12 +133,12 @@ store.dispatch({
                     </li>
                     <li>
                       {" "}
-                      <Link to="/tr" onClick={()=>this.goToPublic()}>Turk </Link>
+                      <Link to="/all" onClick={(e)=>this.goToPublic(e)}>Turk</Link>
                     </li>
                   
                     <li>
                       {" "}
-                      <Link to="/eng" onClick={()=>this.goToPublic()}>English </Link>
+                      <Link to="/all" onClick={(e)=>this.goToPublic(e)}>English</Link>
                     </li>
                   </ul>
                 </li>
