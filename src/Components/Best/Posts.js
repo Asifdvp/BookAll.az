@@ -11,13 +11,12 @@ export default function Posts({posts,loading}){
     
 return(
     <>
-   
                 <section className="main">
             
          <section >
                      <div className="main-content">
                          <div className="xett"></div>
-                         <h1>Azərbaycan Nəşrləri</h1>
+                         <h1>Çox Satılanlar</h1>
                          <div className="xett"></div>
                        
                      </div>
