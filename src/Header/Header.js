@@ -125,7 +125,7 @@ header.onclick = function (){
                     </li>
                     <li>
                       {" "}
-                      <Link to="/">Türk </Link>
+                      <Link to="/tr">Türk </Link>
                     </li>
                   
                     <li>

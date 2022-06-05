@@ -17,6 +17,7 @@ import Sifaris from './User/Sifaris';
 import User from './User/User';
 import Yeni from './User/yeni';
 import Aze from './Components/puplications/Aze';
+import Tr from './Components/puplications/Tr';
 
 function App() {
   return (
@@ -27,9 +28,12 @@ function App() {
 <Routes>
 <Route path='/login' element = {<Login/>}/> 
 <Route path='/aze' element = {<Aze/>}/> 
+<Route path='/tr' element = {<Tr/>}/> 
 <Route path='/about' element = {<About/>}/> 
 <Route path='/sign' element = {<Sign/>}/> 
 <Route path='/product' element = {<Product/>}/>
+<Route path='/aze/product' element = {<Product/>}/>
+<Route path='/tr/product' element = {<Product/>}/>
 <Route path='/search' element = {<Search/>}/>
 <Route path='/sebet' element = {<Sebet/>}/>
 <Route path='/user' element = {<User/>}/>
