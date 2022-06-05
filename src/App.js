@@ -19,6 +19,7 @@ import Yeni from './User/yeni';
 import Aze from './Components/puplications/Aze';
 import Tr from './Components/puplications/Tr';
 import En from './Components/puplications/En';
+import Best from './Components/Best/Best';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
 
 <Routes>
 <Route path='/login' element = {<Login/>}/> 
+<Route path='/best' element = {<Best/>}/> 
 <Route path='/aze' element = {<Aze/>}/> 
 <Route path='/tr' element = {<Tr/>}/> 
 <Route path='/eng' element = {<En/>}/> 
@@ -37,6 +39,7 @@ function App() {
 <Route path='/aze/product' element = {<Product/>}/>
 <Route path='/tr/product' element = {<Product/>}/>
 <Route path='/eng/product' element = {<Product/>}/>
+<Route path='/best/product' element = {<Product/>}/>
 <Route path='/search' element = {<Search/>}/>
 <Route path='/sebet' element = {<Sebet/>}/>
 <Route path='/user' element = {<User/>}/>

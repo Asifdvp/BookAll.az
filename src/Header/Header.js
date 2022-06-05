@@ -59,7 +59,7 @@ header.onclick = function (){
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-    
+
   render() {
     return (
       <section>
@@ -136,7 +136,7 @@ header.onclick = function (){
                   </ul>
                 </li>
                 <li>
-                  <Link to="/" className="janr">
+                  <Link to="/best" className="janr">
                   Çox Satılanlar
                   </Link>
                
