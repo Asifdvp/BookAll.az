@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import "./main.css"
 
 //Azerbaycan bolmesi 
-import one from "./azerbaycan/1.jpg";
-// import two from "./azerbaycan/2.png";
-import three from "./azerbaycan/3.jpg";
-import four from "./azerbaycan/4.jpg";
-import five from "./azerbaycan/5.png";
-
-
+import a_one from "./azerbaycan/1.jpg";
+import a_two from "./azerbaycan/2.png";
+import a_three from "./azerbaycan/3.jpg";
+import a_four from "./azerbaycan/4.jpg";
+import a_five from "./azerbaycan/5.png";
 
 //turk bolmesi
 
@@ -39,24 +37,32 @@ import { AiFillHeart } from "@react-icons/all-files/ai/AiFillHeart";
 
 export default class Main extends Component {
 
-    // state = {
-    //     aze: [],
-    //     tr: [],
-    //     eng: []
-    // }
+    state = {
+        aze: [],
+          tr: [],
+        eng: []
+    }
+
+    getData = () => {
+        fetch('http://localhost:3000/aze/')
+            .then(res => res.json())
+            .then(data => this.setState({ aze: data }))
 
 
-
-    // getData = () => {
-    //     fetch('http://localhost:3000/aze/')
-    //         .then(res => res.json())
-    //         .then(data => this.setState({ aze: data }))
-    // }
+            fetch('http://localhost:3000/tr/')
+            .then(res => res.json())
+            .then(data => this.setState({ tr: data }))
 
 
-    // componentDidMount() {
-    //     this.getData();
-    // }
+            fetch('http://localhost:3000/eng/')
+            .then(res => res.json())
+            .then(data => this.setState({ eng: data }))
+    }
+
+
+    componentDidMount() {
+        this.getData();
+    }
 
     addToFavorite(e) {
 
@@ -64,50 +70,55 @@ export default class Main extends Component {
     }
     render() {
 
-
+console.log(this.state.aze)
         return (
             <section className="main">
-                <section className="az">
+
+                {/* Azerbaycan nesrleri */}
+                <section >
                     <div className="main-content">
                         <div className="xett"></div>
-                        <h1>Azərbaycargrgrgn Nəşrləri</h1>
+                        <h1>Azərbaycan Nəşrləri</h1>
                         <div className="xett"></div>
                         <button type="button" className="daha">
                             Daha Çox
                         </button>
                     </div>
                     <div className="cards">
+{this.state.aze.filter(item=>item.id<6)
+.map(item=>(
+ <div className="card">
+ <div className="card-img">
+     <img alt="img" className="cardi" src={a_one} />
+     <div >
+         <AiFillHeart className="heart" onClick={this.addToFavorite} />
+     </div>
+ </div>
+ <Link to="product">
+     <div className="card-context">
+         <p>
+             <ul>
+<li> Kitab adı:{item.book_name}  </li>
+<li>   Yazar :{item.book_author}  </li>
+<li>   Janr :{item.genre_name}  </li>
+                 </ul>
+             </p>
+     </div>
+ </Link>
+ <div className="price">
+   {item.book_price} AZN
+     <img src={sebet} alt="sebet" />
+ </div>
 
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={one} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>
-                                        Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
-
-
-
-
-
+</div>
+))}
+                       
 
                     </div>
                 </section>
-                <section className="az">
+
+{/* Turk nesrleri */}
+                <section >
                     <div className="main-content">
                         <div className="xett"></div>
                         <h1>Türk Nəşrləri</h1>
@@ -117,117 +128,46 @@ export default class Main extends Component {
                         </button>
                     </div>
                     <div className="cards">
+{this.state.tr.filter(item=>item.id<16)
+.map(item=>(
+ <div className="card">
+ <div className="card-img">
+     <img alt="img" className="cardi" src={a_one} />
+     <div >
+         <AiFillHeart className="heart" onClick={this.addToFavorite} />
+     </div>
+ </div>
+ <Link to="product">
+     <div className="card-context">
+         <p>
+             <ul>
+<li> Kitab adı:{item.book_name}  </li>
+<li>   Yazar :{item.book_author}  </li>
+<li>   Janr :{item.genre_name}  </li>
+                 </ul>
+             </p>
+     </div>
+ </Link>
+ <div className="price">
+   {item.book_price} AZN
+     <img src={sebet} alt="sebet" />
+ </div>
 
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={tthree} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>
-                                        1984
-                                        <br />
-                                        George Orwell</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
+</div>
+))}
+                       
 
-                        </div>
-
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={ttwo} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>5 saniye kuralı
-                                        <br />
-                                        Mel Robbins</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={three} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={four} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={five} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
 
 
 
 
 
                     </div>
-                </section>
-                <section className="az">
+                </section>  
+           {/* English nesrleri */}
+            
+
+           <section >
                     <div className="main-content">
                         <div className="xett"></div>
                         <h1>İngilis Nəşrləri</h1>
@@ -237,121 +177,42 @@ export default class Main extends Component {
                         </button>
                     </div>
                     <div className="cards">
+{this.state.eng.filter(item=>item.id<26)
+.map(item=>(
+ <div className="card">
+ <div className="card-img">
+     <img alt="img" className="cardi" src={a_one} />
+     <div >
+         <AiFillHeart className="heart" onClick={this.addToFavorite} />
+     </div>
+ </div>
+ <Link to="product">
+     <div className="card-context">
+         <p>
+             <ul>
+<li> Kitab adı:{item.book_name}  </li>
+<li>   Yazar :{item.book_author}  </li>
+<li>   Janr :{item.genre_name}  </li>
+                 </ul>
+             </p>
+     </div>
+ </Link>
+ <div className="price">
+   {item.book_price} AZN
+     <img src={sebet} alt="sebet" />
+ </div>
 
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={tthree} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>
-                                        1984
-                                        <br />
-                                        George Orwell</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
+</div>
+))}
+                       
 
-                        </div>
-
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={ttwo} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>5 saniye kuralı
-                                        <br />
-                                        Mel Robbins</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={three} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={four} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
-                        <div className="card">
-                            <div className="card-img">
-                                <img alt="img" className="cardi" src={five} />
-                                <div >
-                                    <AiFillHeart className="heart" onClick={this.addToFavorite} />
-                                </div>
-                            </div>
-                            <Link to="product">
-                                <div className="card-context">
-                                    <p>Malva,
-                                        <br />
-                                        Maksim Qorki</p>
-                                </div>
-                            </Link>
-                            <div className="price">
-                                3.25 AZN
-                                <img src={sebet} alt="sebet" />
-                            </div>
-
-                        </div>
 
 
 
 
 
                     </div>
-                </section>
-
-
-
-
-
+                </section>  
 
 
 
