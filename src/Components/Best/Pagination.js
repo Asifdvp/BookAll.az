@@ -17,7 +17,12 @@ export default function Pagination({postsPerPage,totalPosts,paginate}){
         <ul className='pagination' >
           {pageNumbers.map(number => (
             <li key={number} className='page-item'>
-              <Link onClick={() => paginate(number)} to="/best" className='page-link'>
+              <Link onClick={(e) => {
+                console.log(e.target.textContent)
+e.target.style.color = "red !important"
+
+paginate(number)
+              }   }    to="/best" className='page-link' >
                 {number}
               </Link>
             </li>
