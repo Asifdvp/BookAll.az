@@ -4,6 +4,8 @@ import Posts from "./Posts";
 import Pagination from "./Pagination";
 
 export default function Best() {
+
+
   //bazamiz
   const [posts, setPosts] = useState([]);
   //baza yuklenerken gelir loading
