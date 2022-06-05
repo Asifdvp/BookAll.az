@@ -20,7 +20,10 @@ export default class Tr extends React.Component{
             .then(data => this.setState({ tr: data }))
     }
 
+    addToFavorite(e) {
 
+        e.target.classList.toggle("heart-color")
+    }
     componentDidMount() {
         this.getData();
     }
@@ -32,7 +35,7 @@ export default class Tr extends React.Component{
         <section >
                     <div className="main-content">
                         <div className="xett"></div>
-                        <h1>Azərbaycan Nəşrləri</h1>
+                        <h1>Türk Nəşrləri</h1>
                         <div className="xett"></div>
                        
                     </div>

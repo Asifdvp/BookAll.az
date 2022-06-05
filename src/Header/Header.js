@@ -59,6 +59,7 @@ header.onclick = function (){
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+    
   render() {
     return (
       <section>
@@ -130,7 +131,7 @@ header.onclick = function (){
                   
                     <li>
                       {" "}
-                      <Link to="/">İngilis </Link>
+                      <Link to="/eng">İngilis </Link>
                     </li>
                   </ul>
                 </li>

@@ -24,6 +24,10 @@ export default class Aze extends React.Component{
     componentDidMount() {
         this.getData();
     }
+    addToFavorite(e) {
+
+        e.target.classList.toggle("heart-color")
+    }
     render(){
 
         return(
