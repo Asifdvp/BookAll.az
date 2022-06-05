@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { RiAccountCircleLine } from "@react-icons/all-files/ri/RiAccountCircleLine";
 import { BiSearchAlt2 } from "@react-icons/all-files/bi/BiSearchAlt2";
 import { AiOutlineArrowUp } from "@react-icons/all-files/ai/AiOutlineArrowUp";
+import store from "../redux/store";
 
 export default class Header extends Component {
   state = {
@@ -58,6 +59,13 @@ header.onclick = function (){
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+
+  goToPublic(e){
+store.dispatch({
+  type:"GO_TO_CARD",
+  payload: {vale : e.target.textContent}
+})
+  }
 
   render() {
     return (
@@ -121,16 +129,16 @@ header.onclick = function (){
                   <ul>
                     <li>
                       {" "}
-                      <Link to="/aze">Azərbaycan</Link>{" "}
+                      <Link to="/all" onClick={(e)=>this.goToPublic(e)}>Azerbaycan</Link>{" "}
                     </li>
                     <li>
                       {" "}
-                      <Link to="/tr">Türk </Link>
+                      <Link to="/tr" onClick={()=>this.goToPublic()}>Turk </Link>
                     </li>
                   
                     <li>
                       {" "}
-                      <Link to="/eng">İngilis </Link>
+                      <Link to="/eng" onClick={()=>this.goToPublic()}>English </Link>
                     </li>
                   </ul>
                 </li>

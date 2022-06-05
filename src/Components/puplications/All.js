@@ -2,41 +2,43 @@ import React from "react";
 import sebet from "../../main/sebet.svg";
 import { Link } from "react-router-dom";
 import {AiFillHeart} from "@react-icons/all-files/ai/AiFillHeart";
+import store from "../../redux/store";
 
 export default class All extends React.Component{
     
     state = {
-        aze: [],
+        all: [],
     }
 
-    getData = () => {
-        fetch('http://localhost:3000/aze/')
-            .then(res => res.json())
-            .then(data => this.setState({ aze: data }))
-    }
 
 
     componentDidMount() {
-        this.getData();
+       store.subscribe(()=>{
+           const state =store.getState();
+           this.setState({all:state.nesr[0]},()=>{
+               console.log(this.state.all.length)    
+           })
+       })
     }
     addToFavorite(e) {
 
         e.target.classList.toggle("heart-color")
     }
     render(){
-
-        return(
+        return(     
             <section className="main">
             
         <section >
                     <div className="main-content">
                         <div className="xett"></div>
-                        <h1>Azərbaycan Nəşrləri</h1>
+                        <h1> Nəşrləri</h1>
                         <div className="xett"></div>
                        
                     </div>
+                    
                     <div className="cards">
-{this.state.aze
+
+{this.state.all
 .map(item=>(
  <div className="card">
  <div className="card-img">
@@ -74,6 +76,7 @@ export default class All extends React.Component{
    
 </section>
 
+            
         )
     }
 }
