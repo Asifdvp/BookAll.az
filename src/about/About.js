@@ -3,7 +3,7 @@ import React from "react";
 export default class About extends React.Component{
     render(){
         return (
-<div className="about">
+<div className="about main">
     <h1>"Apollo" Online Kitab Mağazası Şəbəkəsi</h1>
 <br/>
 <br/><br/> Apollo.az e-mağazası 2022-ci ildə qurulmuşdur. Bu e-mağaza yerli və xarici kitabları ofisinizdən, evinizdən internet üzərindən  və telefonla sifarişini təmin edir. E-mağazamızdan alış-veriş etmək çox asandır. Saytda bölmələr, alt bölmələr və mövzular üzrə müxtəlif dillərdə sadələşdirilmiş Kitab Axtarışı Sistemi (KAS) fəaliyyət göstərir. Saytda qeydiyyatdan keçdikdən sonra il ərzində 7/24 endirimli məhsullardan e-poçt vasitəsilə dərhal xəbərdar olmaq imkanını əldə edirsiniz.
