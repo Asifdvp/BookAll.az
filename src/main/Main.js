@@ -3,7 +3,7 @@ import "./main.css"
 
 //Azerbaycan bolmesi 
 import one from "./azerbaycan/1.jpg";
-import two from "./azerbaycan/2.png";
+// import two from "./azerbaycan/2.png";
 import three from "./azerbaycan/3.jpg";
 import four from "./azerbaycan/4.jpg";
 import five from "./azerbaycan/5.png";
@@ -15,48 +15,48 @@ import five from "./azerbaycan/5.png";
 
 import sebet from "./sebet.svg"
 
-import tone from "./turk/1.jpg";
+// import tone from "./turk/1.jpg";
 import ttwo from "./turk/2.jpg";
 import tthree from "./turk/3.jpg";
-import tseven from "./turk/4.jpg";
-import tfive from "./turk/5.jpg";
+// import tseven from "./turk/4.jpg";
+// import tfive from "./turk/5.jpg";
 
 
 import { Link } from "react-router-dom";
 
-import ione from "./ingiils/1.jpg";
-import itwo from "./ingiils/2.jpg";
-import ithree from "./ingiils/3.jpg";
-import iseven from "./ingiils/4.jpg";
-import ifive from "./ingiils/5.jpg";
+// import ione from "./ingiils/1.jpg";
+// import itwo from "./ingiils/2.jpg";
+// import ithree from "./ingiils/3.jpg";
+// import iseven from "./ingiils/4.jpg";
+// import ifive from "./ingiils/5.jpg";
 
 
 // icons
 
-import { AiOutlineHeart } from "@react-icons/all-files/ai/AiOutlineHeart";
+
 import { AiFillHeart } from "@react-icons/all-files/ai/AiFillHeart";
 
 
 export default class Main extends Component {
 
-    state = {
-        aze: [],
-        tr: [],
-        eng: []
-    }
+    // state = {
+    //     aze: [],
+    //     tr: [],
+    //     eng: []
+    // }
 
 
 
-    getData = () => {
-        fetch('http://localhost:3000/aze/')
-            .then(res => res.json())
-            .then(data => this.setState({ aze: data }))
-    }
+    // getData = () => {
+    //     fetch('http://localhost:3000/aze/')
+    //         .then(res => res.json())
+    //         .then(data => this.setState({ aze: data }))
+    // }
 
 
-    componentDidMount() {
-        this.getData();
-    }
+    // componentDidMount() {
+    //     this.getData();
+    // }
 
     addToFavorite(e) {
 
@@ -70,7 +70,7 @@ export default class Main extends Component {
                 <section className="az">
                     <div className="main-content">
                         <div className="xett"></div>
-                        <h1>Azərbaycan Nəşrləri</h1>
+                        <h1>Azərbaycargrgrgn Nəşrləri</h1>
                         <div className="xett"></div>
                         <button type="button" className="daha">
                             Daha Çox
