@@ -1,21 +1,28 @@
-import React, {useEffect, useState}from 'react';
+import React, {PureComponent}from 'react';
 import "./sebet.css";
 import sebet from "./sebet.png"
 import sebet2 from "./2.jpg";
 import logo from './logo.svg'
 import store from '../redux/store';
-export default function Sebet() {
-const [cartGoods,getData] = useState([store.getState().cart]);
-useEffect(()=>{
-    store.subscribe(()=>{
-        const state = store.getState();
-        getData(state.cart,()=>{
-            console.log(cartGoods)
+export default class Sebet extends PureComponent {
+    state={
+        cartGoods:[]
+    }
+    componentDidMount(){
+        store.subscribe(()=>{
+            let state = store.getState();
+            this.setState({cartGoods:state.cart},()=>{
+                console.log(this.state)
+                console.log("sdafsd")
+                this.state.cartGoods.push(store.getState().cart)
+                console.log(this.state)
+            })  
         })
-    })
-})
+         
+    }
 
-console.log(cartGoods)
+
+render(){
 
        return(
            
@@ -34,10 +41,10 @@ console.log(cartGoods)
 <tbody>
 
 
-{ cartGoods.length ?
+{ this.state.cartGoods.length ?
 
 <tr>
-{cartGoods.map((item,index) =>(
+{this.state.cartGoods.map((item,index) =>(
     <>
     <td className='mehsul-name'> <img src={sebet} alt="dsfs"/></td>
 <td className='mehsul-text'>{item.book_name} </td>
@@ -168,4 +175,4 @@ console.log(cartGoods)
     </section>
        )
     
-}
+}}

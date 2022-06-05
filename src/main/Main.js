@@ -70,9 +70,10 @@ store.dispatch({
                         <div className="xett"></div>
                         <h1>Azərbaycan Nəşrləri</h1>
                         <div className="xett"></div>
+                        <Link to="all">
                         <button type="button" className="daha">
                             Daha Çox
-                        </button>
+                        </button> </Link>
                     </div>
                     <div className="cards">
 {this.state.aze.filter(item=>item.id<6)
@@ -113,9 +114,10 @@ store.dispatch({
                         <div className="xett"></div>
                         <h1>Türk Nəşrləri</h1>
                         <div className="xett"></div>
+                        <Link to="all">
                         <button type="button" className="daha">
                             Daha Çox
-                        </button>
+                        </button> </Link>
                     </div>
                     <div className="cards">
 {this.state.tr.filter(item=>item.id<16)
@@ -162,9 +164,11 @@ store.dispatch({
                         <div className="xett"></div>
                         <h1>İngilis Nəşrləri</h1>
                         <div className="xett"></div>
+                        <Link to="all">
+                            
                         <button type="button" className="daha">
                             Daha Çox
-                        </button>
+                        </button> </Link>
                     </div>
                     <div className="cards">
 {this.state.eng.filter(item=>item.id<26)
