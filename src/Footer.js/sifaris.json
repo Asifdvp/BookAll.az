@@ -1,10 +1,10 @@
 [
-    {"name": "Sifarişi necə etmək?"} , 
+    {"name": "Sifarişi necə etmək?","ida":22} , 
     {"name": " Ödənişi necə etmək?"} , 
-    {"name": "  Bölgələrdən sifariş etmək qaydası"} , 
-    {"name": " Çatdırılma"} , 
-    {"name": " Bir kliklə alış-veriş"} , 
-    {"name": "Sifarişi necə etmək?"} 
+    {"name": "  Bölgələrdən sifariş etmək qaydası","ida":312} , 
+    {"name": " Çatdırılma","ida":42} , 
+    {"name": " Bir kliklə alış-veriş","ida":62} , 
+    {"name": "Sifarişi necə etmək?","ida":82} 
    
 
 ]

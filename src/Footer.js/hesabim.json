@@ -1,10 +1,10 @@
 
 [
-    {"name": "   Hesabım"} , 
-    {"name": " Ünvan məlumatları"} , 
-    {"name": "  Hesab detalları"} , 
-    {"name": " Sifarişlər"} , 
-    {"name": " Yükləmələr "} 
+    {"name": "   Hesabım","idb":11} , 
+    {"name": " Ünvan məlumatları","idb":14} , 
+    {"name": "  Hesab detalları","idb":16} , 
+    {"name": " Sifarişlər","idb":19} , 
+    {"name": " Yükləmələr ","idb":18} 
    
 
 ]

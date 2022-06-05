@@ -1,14 +1,15 @@
 import React from "react";
-import a_one from "../../main/azerbaycan/1.jpg";
 import sebet from "../../main/sebet.svg";
 import { Link } from "react-router-dom";
 import {AiFillHeart} from "@react-icons/all-files/ai/AiFillHeart";
+
 
 export default function Posts({posts,loading}){
     if(loading){
         return <h2>Loading </h2>
     }
-    
+   
+
 return(
     <>
                 <section className="main">
@@ -25,14 +26,14 @@ return(
  .map(item=>(
   <div className="card" key={item.id} >
   <div className="card-img">
-      <img alt="img" className="cardi" src={a_one} />
+      <img alt="img" className="cardi" src={item.book_img} />
       <div >
           <AiFillHeart className="heart" onClick={(e)=>{
   e.target.classList.toggle("heart-color")
           }} />
       </div>
   </div>
-  <Link to="product">
+  <Link to="product" >
       <div className="card-context">
           <p>
               <ul>

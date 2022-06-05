@@ -1,10 +1,10 @@
 [
-    {"name": "Əlaqə"} , 
-    {"name": " Xəbərlər"} , 
-    {"name": "  Seçilmişlər siyahısı"} , 
-    {"name": " Çatdırılma"} , 
-    {"name": " Əməkdaşlıq"} , 
-    {"name": "Yaranma Tarixi"} 
+    {"name": "Əlaqə","idc":4} , 
+    {"name": " Xəbərlər" ,"idc":5} , 
+    {"name": "  Seçilmişlər siyahısı", "idc":6} , 
+    {"name": " Çatdırılma", "idc":7} , 
+    {"name": " Əməkdaşlıq" ,"idc":8} , 
+    {"name": "Yaranma Tarixi", "idc":9} 
    
 
 ]

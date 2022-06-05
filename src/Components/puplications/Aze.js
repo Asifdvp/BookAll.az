@@ -1,9 +1,4 @@
 import React from "react";
-import a_one from "../../main/azerbaycan/1.jpg";
-import two from "../../main/azerbaycan/2.png";
-import three from "../../main/azerbaycan/3.jpg";
-import four from "../../main/azerbaycan/4.jpg";
-import five from "../../main/azerbaycan/5.png";
 import sebet from "../../main/sebet.svg";
 import { Link } from "react-router-dom";
 import {AiFillHeart} from "@react-icons/all-files/ai/AiFillHeart";
@@ -45,7 +40,7 @@ export default class Aze extends React.Component{
 .map(item=>(
  <div className="card">
  <div className="card-img">
-     <img alt="img" className="cardi" src={a_one} />
+     <img alt="img" className="cardi" src={item.book_img} />
      <div >
          <AiFillHeart className="heart" onClick={this.addToFavorite} />
      </div>

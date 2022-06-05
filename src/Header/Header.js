@@ -5,7 +5,6 @@ import "./header.css";
 import logo from "./header-img/apol.svg";
 import sebet from "./header-img/sebet.svg";
 //json file
-import Category from "./category.json";
 //router dom
 import { Link } from "react-router-dom";
 //React icons

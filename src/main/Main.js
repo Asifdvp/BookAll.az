@@ -1,37 +1,19 @@
 import React, { Component } from "react";
 import "./main.css"
 
-//Azerbaycan bolmesi 
-import a_one from "./azerbaycan/1.jpg";
-import a_two from "./azerbaycan/2.png";
-import a_three from "./azerbaycan/3.jpg";
-import a_four from "./azerbaycan/4.jpg";
-import a_five from "./azerbaycan/5.png";
-
-//turk bolmesi
 
 
 import sebet from "./sebet.svg"
 
-// import tone from "./turk/1.jpg";
-import ttwo from "./turk/2.jpg";
-import tthree from "./turk/3.jpg";
-// import tseven from "./turk/4.jpg";
-// import tfive from "./turk/5.jpg";
 
 
 import { Link } from "react-router-dom";
 
-// import ione from "./ingiils/1.jpg";
-// import itwo from "./ingiils/2.jpg";
-// import ithree from "./ingiils/3.jpg";
-// import iseven from "./ingiils/4.jpg";
-// import ifive from "./ingiils/5.jpg";
 
 
 // icons
 
-
+import store from '../redux/store';
 import { AiFillHeart } from "@react-icons/all-files/ai/AiFillHeart";
 
 
@@ -68,9 +50,17 @@ export default class Main extends Component {
 
         e.target.classList.toggle("heart-color")
     }
+    addToCard = (id) =>{
+store.dispatch({
+    type:"ADD_TO_CARD",
+    payload:{
+        id:id
+    }
+})
+    }
     render() {
 
-console.log(this.state.aze)
+
         return (
             <section className="main">
 
@@ -89,7 +79,7 @@ console.log(this.state.aze)
 .map(item=>(
  <div className="card">
  <div className="card-img">
-     <img alt="img" className="cardi" src={a_one} />
+     <img alt="img" className="cardi" src={item.book_img} />
      <div >
          <AiFillHeart className="heart" onClick={this.addToFavorite} />
      </div>
@@ -105,7 +95,7 @@ console.log(this.state.aze)
              </p>
      </div>
  </Link>
- <div className="price">
+ <div className="price" onClick={()=>this.addToCard(item.id)}>
    {item.book_price} AZN
      <img src={sebet} alt="sebet" />
  </div>
@@ -132,7 +122,7 @@ console.log(this.state.aze)
 .map(item=>(
  <div className="card">
  <div className="card-img">
-     <img alt="img" className="cardi" src={a_one} />
+     <img alt="img" className="cardi" src={item.book_img} />
      <div >
          <AiFillHeart className="heart" onClick={this.addToFavorite} />
      </div>
@@ -181,7 +171,7 @@ console.log(this.state.aze)
 .map(item=>(
  <div className="card">
  <div className="card-img">
-     <img alt="img" className="cardi" src={a_one} />
+     <img alt="img" className="cardi" src={item.book_img} />
      <div >
          <AiFillHeart className="heart" onClick={this.addToFavorite} />
      </div>

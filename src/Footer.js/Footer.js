@@ -27,7 +27,7 @@ export default class Footer extends Component {
     {Haqqimizda.map(item =>{
             return(
     <li className="footer-column-menu-item" role="menuitem" >
-    <Link to="#" key={item.name} className="footer-column-menu-item-link">{item.name}</Link>
+    <Link to="#" key={item.idc} className="footer-column-menu-item-link">{item.name}</Link>
   </li>)
         })}
     </ul>
@@ -38,8 +38,8 @@ export default class Footer extends Component {
     <ul className="footer-column-menu" role="menu">
         {FooterJson.map(item =>{
             return(
-    <li className="footer-column-menu-item" role="menuitem">
-    <a href="#" key={item.name} className="footer-column-menu-item-link">{item.name}</a>
+    <li className="footer-column-menu-item" role="menuitem" >
+   <Link to='/'   key={item.ida} className="footer-column-menu-item-link">{item.name}</Link>
   </li>)
         })}
 
@@ -50,8 +50,8 @@ export default class Footer extends Component {
     <ul className="footer-column-menu" role="menu">
     {Hesabim.map(item =>{
             return(
-    <li className="footer-column-menu-item" role="menuitem">
-    <a href="#" key={item.name} className="footer-column-menu-item-link">{item.name}</a>
+    <li className="footer-column-menu-item" role="menuitem" >
+    <Link to='/'   key={item.idb}className="footer-column-menu-item-link">{item.name}</Link>
   </li>)
         })}
     </ul>

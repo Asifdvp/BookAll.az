@@ -1,11 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState}from 'react';
 import "./sebet.css";
 import sebet from "./sebet.png"
 import sebet2 from "./2.jpg";
 import logo from './logo.svg'
-export default class Sebet extends React.Component{
-    render(){
+import store from '../redux/store';
+export default function Sebet() {
+const [cartGoods,getData] = useState([store.getState().cart]);
+useEffect(()=>{
+    store.subscribe(()=>{
+        const state = store.getState();
+        getData(state.cart)
+    })
+})
+
+console.log(cartGoods)
+
        return(
+           
 <section className='sebet-section'>
 <div className='sebet-container'>
 <div className='sebet-div'>
@@ -19,23 +30,58 @@ export default class Sebet extends React.Component{
     <th className='mehsul-remove'> </th> 
 </tr>
 <tbody>
+
+
+{ cartGoods.length ?
+
 <tr>
-<td className='mehsul-name'> <img src={sebet} alt="dsfs"/></td>
-<td className='mehsul-text'>Varlı Ata,Kasıb Ata </td>
-<td className='mehsul-qiymet'> 3,59</td>
+{cartGoods.map((item,index) =>(
+    <>
+    <td className='mehsul-name'> <img src={sebet} alt="dsfs"/></td>
+<td className='mehsul-text'>{item.book_name} </td>
+<td className='mehsul-qiymet'> {item.book_price}  </td>
 <td className='mehsul-say'>
     <input type="number" value="1"/>
 </td>
 <td className='mehsul-cem'> 3,59</td>
 <td className='mehsul-remove'> X</td>
+</>
+))}
+
 
     </tr>
+
+:
+<p>Sebet Bosdur</p>
+
+
+
+}
+
+
+
+
+
+
+
 <tr className='xettb'> 
     <td> <hr/></td>
 </tr>
 
 
-<tr>
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <tr>
 <td className='mehsul-name'> <img src={sebet2} alt="dsfs"/></td>
 <td className='mehsul-text'>Danışığınla həyat qazan</td>
 <td className='mehsul-qiymet'> 15,29</td>
@@ -50,7 +96,7 @@ export default class Sebet extends React.Component{
     </tr>
 <tr className='xettb'> 
     <td> <hr/></td>
-</tr>
+</tr> */}
 </tbody>
     </table>
 
@@ -119,5 +165,5 @@ export default class Sebet extends React.Component{
 </div>
     </section>
        )
-    }
+    
 }
