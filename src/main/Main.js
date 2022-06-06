@@ -70,7 +70,7 @@ store.dispatch({
                         <div className="xett"></div>
                         <h1>Azərbaycan Nəşrləri</h1>
                         <div className="xett"></div>
-                        <Link to="all">
+                        <Link to="aze">
                         <button type="button" className="daha">
                             Daha Çox
                         </button> </Link>
@@ -114,7 +114,7 @@ store.dispatch({
                         <div className="xett"></div>
                         <h1>Türk Nəşrləri</h1>
                         <div className="xett"></div>
-                        <Link to="all">
+                        <Link to="tr">
                         <button type="button" className="daha">
                             Daha Çox
                         </button> </Link>
@@ -164,8 +164,7 @@ store.dispatch({
                         <div className="xett"></div>
                         <h1>İngilis Nəşrləri</h1>
                         <div className="xett"></div>
-                        <Link to="all">
-                            
+                        <Link to="en">
                         <button type="button" className="daha">
                             Daha Çox
                         </button> </Link>

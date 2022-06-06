@@ -1,7 +1,6 @@
 .searchBox{
     width: 100%;
-    height: 500px;
-  margin-bottom: 120px;
+ 
 }
 .search-all{
     padding: 20px;
@@ -9,9 +8,8 @@
     margin: 0 auto;
    
 }
-.search-text{
 
-    height: 500px;
+.search-text{
     background-color: #f6f6f6;
     color: red;
     font-size: 30px;
