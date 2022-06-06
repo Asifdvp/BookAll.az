@@ -4,7 +4,15 @@
     margin-bottom: 500px;
   
 }
-
+.bos{
+    margin-top: 10px;
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    border: 1px solid #0F7CF1;
+    
+}
 .sebet-container {
     width: 79%;
     margin: 0 auto;
@@ -78,7 +86,16 @@ th {
 .mehsul-say {
     width: 60px !important;
 }
-
+.inputs{
+    box-sizing: border-box !important; 
+    padding: 6px !important;
+    border-radius: 3px !important;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    color: #0F7CF1 !important;
+    border: none !important;
+    width: 86% !important;
+}
 .mehsul-say input {
     box-sizing: border-box;
     padding: 6px;

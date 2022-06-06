@@ -2,6 +2,8 @@ import React, {PureComponent}from 'react';
 import "./sebet.css";
 import sebet from "./sebet.png"
 import sebet2 from "./2.jpg";
+
+
 import logo from './logo.svg'
 import store from '../redux/store';
 export default class Sebet extends PureComponent {
@@ -61,7 +63,7 @@ render(){
     </tr>
 
 :
-<p>Sebet Bosdur</p>
+<p className='bos'>Səbət Boşdur</p>
 
 
 

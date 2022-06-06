@@ -9,6 +9,13 @@
     width: 90%;
    margin: 0 auto;
 }
+.llogin .container{
+  margin: 0;
+  padding: 0;
+}
+.form-control{
+  border: none;
+}
 .yox{
     display: flex;
     justify-content: center;
@@ -58,19 +65,21 @@ color: #c3c3c3;
   margin-bottom: 5px;
 }
 
-.form-control input {
-  border: 2px solid #f0f0f0;
+.form-control input, .form-control select {
+  border: 2px solid #f0f0f0 !important;
   border-radius: 4px;
   display: block;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 18px !important;
   padding: 10px;
-  width: 100%;
+  background-color: #f0f0e9;
+  width: 86% !important;
+  border-radius: 10px !important;
 }
 
 .form-control input:focus {
   outline: 0;
-  border-color: #777;
+  border-color:#E8AE1E !important; 
 }
 
 .form-control.success input {
@@ -78,7 +87,7 @@ color: #c3c3c3;
 }
 
 .form-control.error input {
-  border-color: #e74c3c;
+  border-color: #e74c3c ;
 }
 
 .form-control i {

@@ -9,7 +9,10 @@
     width: 60%;
    margin: 0 auto;
 }
-
+.container{
+  margin: 0;
+  padding: 0;
+}
 .headerY {
   border-bottom: 1px solid #f0f0f0;
   background-color: #E8AE1E;

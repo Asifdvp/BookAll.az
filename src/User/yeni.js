@@ -52,25 +52,27 @@ export default class Yeni extends Component{
       <br/>
       <select type="text" placeholder="Janr Daxil edin" id="username" required>
            <option>Detektiv</option>
+           <option>Roman</option>
+           <option>Detektiv</option>
           </select>
      
      
     </div>
     <div className="form-control">
       <label for="username">Şəkil</label>
-      <input type="file" placeholder="" id="email"required />
+      <input type="file" placeholder="" id="email"required className=".inputs" />
    
     
     </div>
     <div className="form-control">
       <label for="username">Başlıq və ya məhsulun adı</label>
-      <input type="password"  id="password" required/>
+      <input type="text"  id="password" required className=".inputs" />
      
      
     </div>
     <div className="form-control">
       <label for="username">Açıqlama</label><br/>
-      <textarea type="text"  id="password2" required/>
+      <textarea type="text"  id="password2" required className=".inputs"/>
      
     </div>
     <button className="a">Əlavə Et    </button>
