@@ -1,7 +1,7 @@
 import React, {PureComponent}from 'react';
 import "./sebet.css";
 import sebet from "./sebet.png"
-import sebet2 from "./2.jpg";
+// import sebet2 from "./2.jpg";
 
 
 import logo from './logo.svg'
@@ -46,7 +46,7 @@ render(){
 { this.state.cartGoods.length ?
 
 <tr>
-{this.state.cartGoods.map((item,index) =>(
+{this.state.cartGoods?.map((item,index) =>(
     <>
     <td className='mehsul-name'> <img src={sebet} alt="dsfs"/></td>
 <td className='mehsul-text'>{item.book_name} </td>
