@@ -333,11 +333,10 @@ function reducer(state = initialState, action) {
         cart,
       };
     case "GO_TO_CARD":
-        
       let cards = state.goods.filter(item =>{
         return item.nesr === action.payload.vale
     } );    
-      const nesr = [...state.nesr, cards]; 
+      const nesr = [cards]; 
       return {
         ...state,
         nesr:nesr,

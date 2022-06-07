@@ -10,22 +10,18 @@ export default class Sebet extends PureComponent {
     state={
         cartGoods:[]
     }
-    componentDidMount(){
-        store.subscribe(()=>{
+    componentDidMount(){  
             let state = store.getState();
-            this.setState({cartGoods:state.cart},()=>{
-                console.log(this.state)
-                console.log("sdafsd")
-                this.state.cartGoods.push(store.getState().cart)
-                console.log(this.state)
+            this.setState({cartGoods:state.cart},()=>{         
+             console.log(this.state)
             })  
-        })
+       
          
     }
 
 
 render(){
-
+console.log(this.state)
        return(
            
 <section className='sebet-section'>
@@ -45,10 +41,10 @@ render(){
 
 { this.state.cartGoods.length ?
 
-<tr>
+<>
 {this.state.cartGoods?.map((item,index) =>(
-    <>
-    <td className='mehsul-name'> <img src={sebet} alt="dsfs"/></td>
+    <tr>
+    <td className='mehsul-name'> <img src={item.book_img} alt="dsfs"/></td>
 <td className='mehsul-text'>{item.book_name} </td>
 <td className='mehsul-qiymet'> {item.book_price}  </td>
 <td className='mehsul-say'>
@@ -56,11 +52,11 @@ render(){
 </td>
 <td className='mehsul-cem'> 3,59</td>
 <td className='mehsul-remove'> X</td>
-</>
+</tr>
 ))}
+</>
 
-
-    </tr>
+   
 
 :
 <p className='bos'>Səbət Boşdur</p>

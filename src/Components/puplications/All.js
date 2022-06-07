@@ -13,12 +13,10 @@ export default class All extends React.Component{
 
 
     componentDidMount() {
-       store.subscribe(()=>{
-           const state =store.getState();
-           this.setState({all:state.nesr[state.nesr.length - 1]},()=>{
-               console.log(this.state.all.length)    
-           })
-       })
+            const state =store.getState();
+            this.setState({all:state.nesr[0]})
+           console.log(state.nesr)
+
     }
     addToFavorite(e) {
 
@@ -27,7 +25,7 @@ export default class All extends React.Component{
     render(){
         return(     
             <section className="main">
-            
+
         <section >
                     <div className="main-content">
                         <div className="xett"></div>
@@ -36,7 +34,7 @@ export default class All extends React.Component{
                        
                     </div>
                     
-                    <div className="cards">
+                    <div className="cards" id="public_card">
 
 {this.state.all
 .map(item=>(

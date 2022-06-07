@@ -73,6 +73,7 @@ store.dispatch({
       <button onClick={this.handleClick} id="myBtn" >
 <AiOutlineArrowUp/>
       </button>
+  
         <div className="text">
           "Kitabsız bir ömrün nə mənası var."
           <div>
