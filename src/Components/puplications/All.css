@@ -2,23 +2,36 @@
     display: flex;
 }
 .public-menu{
-    margin-top: 40px;
- 
-    width: 200px;
-    height: 400px;
-    
+    margin-top: 90px;
+ border: 1px solid orange;
+  margin-left: 15px;
+  
+   
+}
+#public-menu{
+    padding-top: 16px !important;
 }
 .public-menu ul{
-    padding: 0;
+    padding: 0 !important;
+    text-align: left;
+    width: 200px;
+    padding-bottom: 0px;
 }
 .public-menu ul li {
     color:#e8ae1e;
     padding: 20px;
+    padding-left: 40px;
     font-size: 22px;
     font-weight: 400;
-    transition: all 0.5s;
+    transition: all 1s;
     cursor: pointer;
 }
 .public-menu ul li:hover{
-    background-color: rebeccapurple;
+    background-color: #62A7F3;
+    color: white;
+}
+.loading{
+    font-size: 25px;
+    color: red;
+    font-weight: bold;
 }

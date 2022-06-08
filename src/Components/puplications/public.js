@@ -12,7 +12,7 @@ store.dispatch({
   return (
     <section className="publics">
       <div className="public-menu">
-        <ul>
+        <ul id="public-menu">
           <li  onClick={(e) => goToPublic(e)}>Azerbaycan</li>
           <li onClick={(e) => goToPublic(e)}>Turk</li>
           <li onClick={(e) => goToPublic(e)}>English</li>
