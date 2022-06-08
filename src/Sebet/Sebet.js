@@ -15,8 +15,7 @@ export default class Sebet extends PureComponent {
             this.setState({cartGoods:state.cart},()=>{         
              console.log(this.state)
             })  
-       
-         
+ 
     }
 
 

@@ -1,0 +1,24 @@
+.all-section{
+    display: flex;
+}
+.public-menu{
+    margin-top: 40px;
+ 
+    width: 200px;
+    height: 400px;
+    
+}
+.public-menu ul{
+    padding: 0;
+}
+.public-menu ul li {
+    color:#e8ae1e;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.public-menu ul li:hover{
+    background-color: rebeccapurple;
+}

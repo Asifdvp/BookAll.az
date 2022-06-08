@@ -60,12 +60,12 @@ header.onclick = function (){
       document.documentElement.scrollTop = 0;
     }
 
-  goToPublic(e){
-store.dispatch({
-  type:"GO_TO_CARD",
-  payload: {vale : e.target.textContent}
-})
-  }
+//   goToPublic(e){
+// store.dispatch({
+//   type:"GO_TO_PUBLIC",
+//   payload: {vale : "Azerbaycan"}
+// })
+  // }
 
   render() {
     return (
@@ -73,7 +73,6 @@ store.dispatch({
       <button onClick={this.handleClick} id="myBtn" >
 <AiOutlineArrowUp/>
       </button>
-  
         <div className="text">
           "Kitabsız bir ömrün nə mənası var."
           <div>
@@ -124,10 +123,10 @@ store.dispatch({
                   <Link to="/">Ana Səhifə </Link>
                 </li>
                 <li>
-                  <Link to="/" className="janr">
+                  <Link to="/all" className="janr">
                     Nəşrlər
                   </Link>
-                  <ul>
+                  {/* <ul>
                     <li>
                       {" "}
                       <Link to="/all" onClick={(e)=>this.goToPublic(e)}>Azerbaycan</Link>{" "}
@@ -141,7 +140,7 @@ store.dispatch({
                       {" "}
                       <Link to="/all" onClick={(e)=>this.goToPublic(e)}>English</Link>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li>
                   <Link to="/best" className="janr">

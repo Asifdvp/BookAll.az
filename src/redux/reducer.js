@@ -4,6 +4,7 @@
 let initialState = {
   nesr: [],
   cart: [],
+  publics:[],
   goods: [
       {
         id: 1,
@@ -341,6 +342,15 @@ function reducer(state = initialState, action) {
         ...state,
         nesr:nesr,
       };
+    // case "GO_TO_PUBLIC":
+    //   const publics_card = state.goods.filter(item =>{
+    //     return item.nesr === action.payload.vale
+    // } );    
+    //   const publics = [publics_card]; 
+    //   return {
+    //     ...state,
+    //     publics,
+    //   };
 
     default:
       return state;
