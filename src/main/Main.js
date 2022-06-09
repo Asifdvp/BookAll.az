@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 // icons
 
 import store from '../redux/store';
-import { AiFillHeart } from "@react-icons/all-files/ai/AiFillHeart";
+
 
 
 export default class Main extends Component {
@@ -41,15 +41,14 @@ export default class Main extends Component {
             .then(data => this.setState({ eng: data }))
     }
 
-
     componentDidMount() {
         this.getData();
     }
 
-    addToFavorite(e) {
+    // addToFavorite(e) {
 
-        e.target.classList.toggle("heart-color")
-    }
+    //     e.target.classList.toggle("heart-color")
+    // }
     addToCard = (id) =>{
 store.dispatch({
     type:"ADD_TO_CARD",
@@ -81,9 +80,7 @@ store.dispatch({
  <div className="card">
  <div className="card-img">
      <img alt="img" className="cardi" src={item.book_img} />
-     <div >
-         <AiFillHeart className="heart" onClick={this.addToFavorite} />
-     </div>
+    
  </div>
  <Link to="product">
      <div className="card-context">
@@ -125,9 +122,7 @@ store.dispatch({
  <div className="card">
  <div className="card-img">
      <img alt="img" className="cardi" src={item.book_img} />
-     <div >
-         <AiFillHeart className="heart" onClick={this.addToFavorite} />
-     </div>
+   
  </div>
  <Link to="product">
      <div className="card-context">
@@ -175,9 +170,7 @@ store.dispatch({
  <div className="card">
  <div className="card-img">
      <img alt="img" className="cardi" src={item.book_img} />
-     <div >
-         <AiFillHeart className="heart" onClick={this.addToFavorite} />
-     </div>
+     
  </div>
  <Link to="product">
      <div className="card-context">
