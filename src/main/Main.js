@@ -93,9 +93,9 @@ store.dispatch({
              </p>
      </div>
  </Link>
- <div className="price" onClick={()=>this.addToCard(item.id)}>
+ <div className="price" >
    {item.book_price} AZN
-     <img src={sebet} alt="sebet" />
+     <img src={sebet} alt="sebet" onClick={()=>this.addToCard(item.id)} />
  </div>
 
 </div>
@@ -137,7 +137,7 @@ store.dispatch({
  </Link>
  <div className="price">
    {item.book_price} AZN
-     <img src={sebet} alt="sebet" />
+     <img src={sebet} alt="sebet"  onClick={()=>this.addToCard(item.id)}/>
  </div>
 
 </div>
@@ -151,9 +151,9 @@ store.dispatch({
 
                     </div>
                 </section>  
-           {/* English nesrleri */}
-            
 
+
+           {/* English nesrleri */}
            <section >
                     <div className="main-content">
                         <div className="xett"></div>
@@ -185,7 +185,7 @@ store.dispatch({
  </Link>
  <div className="price">
    {item.book_price} AZN
-     <img src={sebet} alt="sebet" />
+     <img src={sebet} alt="sebet" onClick={()=>this.addToCard(item.id)} />
  </div>
 
 </div>
