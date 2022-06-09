@@ -12,9 +12,7 @@ export default class Sebet extends PureComponent {
     }
     componentDidMount(){  
             let state = store.getState();
-            this.setState({cartGoods:state.cart},()=>{         
-             console.log(this.state)
-            })  
+            this.setState({cartGoods:state.cart})
     }
 
     deleteItem(id,index){ 
@@ -23,12 +21,16 @@ store.dispatch({
     type:"DELETE_ITEM",
     payload:{id:elm_id}
 })
-console.log(this.state)
+
+    let state = store.getState();
+    this.setState({cartGoods:state.cart})
+
 // this.setState({cartGoods:store.getState().cart})
     }
 
 render(){
-
+// console.log(this.state.cartGoods)
+// console.log(store.getState().cart)
        return(
            
 <section className='sebet-section'>
@@ -49,7 +51,7 @@ render(){
 { this.state.cartGoods.length ?
 
 <>
-{this.state.cartGoods?.map((item,index) =>(
+{this.state.cartGoods.map((item,index) =>(
     <tr>
     <td className='mehsul-name'> <img src={item.book_img} alt="dsfs"/></td>
 <td className='mehsul-text'>{item.book_name}, {item.book_author}</td>

@@ -351,7 +351,7 @@ function reducer(state = initialState, action) {
       let sebet = state.cart.filter((item,index)=>{
         return index !== action.payload.id
       });
-      const newSebet = [sebet];
+      const newSebet = [...sebet];
 
       return{
         ...state,
