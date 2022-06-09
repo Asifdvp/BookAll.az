@@ -18,9 +18,16 @@ export default class Sebet extends PureComponent {
  
     }
 
+    deleteItem(e){
+let name = e.target.parentElement.children[1].textContent
+store.dispatch({
+    type:"DELETE_ITEM",
+    payload:{name:name}
+})
+    }
 
 render(){
-console.log(this.state)
+
        return(
            
 <section className='sebet-section'>
@@ -50,7 +57,7 @@ console.log(this.state)
     <input type="number" value="1"/>
 </td>
 <td className='mehsul-cem'> 3,59</td>
-<td className='mehsul-remove'> X</td>
+<td className='mehsul-remove' onClick={(e)=>{this.deleteItem(e)}}> X</td>
 </tr>
 ))}
 </>

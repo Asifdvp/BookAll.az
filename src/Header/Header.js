@@ -153,6 +153,10 @@ header.onclick = function (){
                 <Link to="about" className="janr">
                  Haqqımızda</Link>
                 </li>
+                <li>
+                <Link to="best" className="janr">
+                 İkinci əl</Link>
+                </li>
               
               </ul>
             </div>

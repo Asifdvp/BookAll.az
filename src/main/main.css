@@ -75,6 +75,13 @@ padding-top: 10px;
     height: 220px;
     border-radius: 5px;
 }
+@media screen and (max-width: 600px) {
+    .card ,.card-img, .card-img img{
+      width: 100%;
+      display: block;
+     
+    }
+  }
 .heart{
     position: absolute;
     width: 28px;

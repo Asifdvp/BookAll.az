@@ -342,6 +342,11 @@ function reducer(state = initialState, action) {
         ...state,
         nesr:nesr,
       };
+    case "DELETE_ITEM":
+      let sebet_carts = state.cart;
+console.log(sebet_carts);
+
+
     // case "GO_TO_PUBLIC":
     //   const publics_card = state.goods.filter(item =>{
     //     return item.nesr === action.payload.vale
