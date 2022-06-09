@@ -2,6 +2,7 @@
 //  import React,{useState,useEffect} from 'react';
 
 let initialState = {
+  localCarts:[],
   nesr: [],
   cart: [],
   publics:[],
@@ -329,11 +330,26 @@ function reducer(state = initialState, action) {
       let good = state.goods.find((elem) => {
         return elem.id === action.payload.id;
       });
-      
+    
+     
       const cart = [...state.cart, good];
+        //local storage elave elemek cabalari
+      let carts;
+      if(localStorage.getItem("carts") === null){
+carts=[];
+      }
+      else{
+carts=JSON.parse(localStorage.getItem("carts"));
+      }
+      carts.push(good);
+      console.log([...carts])
+      localStorage.setItem("carts",JSON.stringify(carts));
+     let localCarts = JSON.parse(localStorage.getItem("carts"))
+
       return {
         ...state,
         cart,
+        localCarts,
       };
 
       //nesrler bolmesi
@@ -352,10 +368,14 @@ function reducer(state = initialState, action) {
         return index !== action.payload.id
       });
       const newSebet = [...sebet];
+      localStorage.setItem("carts",JSON.stringify(sebet));
+let newLocalCarts = JSON.parse(localStorage.getItem("carts"))
+console.log(newLocalCarts)
 
       return{
         ...state,
-        cart:newSebet
+        cart:newSebet,
+        localCarts:newLocalCarts
       }
      
 

@@ -11,8 +11,27 @@ export default class Sebet extends PureComponent {
         cartGoods:[]
     }
     componentDidMount(){  
+        window.addEventListener("load",()=>{
+           if(localStorage.getItem("carts") === null){
+               let state = store.getState();
+               this.setState({cartGoods:state.cart})
+           }
+           else{
+            let carts = JSON.parse(localStorage.getItem("carts"));
+            this.setState({cartGoods:carts})
+           }
+           
+        })
+        if(localStorage.getItem("carts") === null){
             let state = store.getState();
             this.setState({cartGoods:state.cart})
+        }
+        else{
+         let carts = JSON.parse(localStorage.getItem("carts"));
+         this.setState({cartGoods:carts})
+        }
+        // let state = store.getState();
+        // this.setState({cartGoods:state.localCarts})
     }
 
     deleteItem(id,index){ 
@@ -22,11 +41,13 @@ store.dispatch({
     payload:{id:elm_id}
 })
 
+let carts = JSON.parse(localStorage.getItem("carts"));
+         this.setState({cartGoods:carts})
     let state = store.getState();
     this.setState({cartGoods:state.cart})
-
 // this.setState({cartGoods:store.getState().cart})
     }
+
 
 render(){
 // console.log(this.state.cartGoods)
