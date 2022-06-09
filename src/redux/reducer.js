@@ -324,6 +324,7 @@ let initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
+    //sebete elave elemek
     case "ADD_TO_CARD":
       let good = state.goods.find((elem) => {
         return elem.id === action.payload.id;
@@ -334,6 +335,8 @@ function reducer(state = initialState, action) {
         ...state,
         cart,
       };
+
+      //nesrler bolmesi
     case "GO_TO_CARD":
       let cards = state.goods.filter(item =>{
         return item.nesr === action.payload.vale
@@ -343,8 +346,18 @@ function reducer(state = initialState, action) {
         ...state,
         nesr:nesr,
       };
-    
+      //sebetden silmek
+    case "DELETE_ITEM":
+      let sebet = state.cart.filter((item,index)=>{
+        return index !== action.payload.id
+      });
+      const newSebet = [sebet];
 
+      return{
+        ...state,
+        cart:newSebet
+      }
+     
 
 
     // case "GO_TO_PUBLIC":

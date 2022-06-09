@@ -15,17 +15,16 @@ export default class Sebet extends PureComponent {
             this.setState({cartGoods:state.cart},()=>{         
              console.log(this.state)
             })  
- 
     }
 
-    deleteItem(id,index){
-        console.log(index)
-let name = id.target.parentElement.parentElement.children
-console.log(name)
+    deleteItem(id,index){ 
+let elm_id =( ((id.target.parentElement.children[4].textContent)-564)/564)
 store.dispatch({
     type:"DELETE_ITEM",
-    payload:{name:name}
+    payload:{id:elm_id}
 })
+console.log(this.state)
+// this.setState({cartGoods:store.getState().cart})
     }
 
 render(){
