@@ -4,6 +4,10 @@
     margin-bottom: 50px;
   
 }
+
+input[type=text]:focus {
+  outline: none;
+}
 .bos{
     margin-top: 10px;
     text-align: center;
@@ -39,19 +43,20 @@ tr {
 }
 
 th {
-
+width: 20%;
     color: white;
     font-weight: 500;
     font-size: 20px;
     display: flex;
-    margin-left: 15px;
+   
 }
 
 th:nth-child(1) {
-    padding-left: 15px;
+    padding-left: 25px;
 }
 
 td {
+    width: 20%;
     padding-top: 12px;
     color: #0F7CF1;
     font-weight: 600;
@@ -61,14 +66,15 @@ td {
 }
 
 .sebet-div tr td img {
-    width: 90px;
+    width: 40%;
     border-radius: 5px;
-    height: 130px;
+   height: auto;
+    object-fit: contain;
 }
 
 td,
 th {
-    text-align: center;
+    text-align: left;
 }
 
 .mehsul-name {
@@ -76,11 +82,11 @@ th {
 }
 
 .mehsul-text {
-    width: 200px;
+    width: 20%;
 }
 
 .mehsul-qiymet {
-    width: 100px;
+    width: 10%;
 }
 
 .mehsul-say {

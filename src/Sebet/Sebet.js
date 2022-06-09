@@ -36,10 +36,9 @@ render(){
 <table>
 <tr className='bas'> 
     <th className='meshul-name'> Məhsul</th> 
-    <th className='mehsul-text'> </th> 
+    <th className='mehsul-text'>Adı </th> 
     <th className='mehsul-qiymet'> Qiymət</th> 
     <th className='mehsul-say'> Say</th> 
-    <th className='mehsul-cem'>Cəmi </th> 
     <th className='mehsul-remove'> </th> 
 </tr>
 <tbody>
@@ -51,12 +50,14 @@ render(){
 {this.state.cartGoods?.map((item,index) =>(
     <tr>
     <td className='mehsul-name'> <img src={item.book_img} alt="dsfs"/></td>
-<td className='mehsul-text'>{item.book_name} </td>
-<td className='mehsul-qiymet'> {item.book_price}  </td>
+<td className='mehsul-text'>{item.book_name}, {item.book_author}</td>
+<td className='mehsul-qiymet'> {item.book_price} {"   "}    AZN  </td>
 <td className='mehsul-say'>
-    <input type="number" value="1"/>
+    
+    <input type={"text"} style={{"background":"white"}}
+ value={1} disabled/>
 </td>
-<td className='mehsul-cem'> 3,59</td>
+
 <td className='mehsul-remove' onClick={(e)=>{this.deleteItem(e)}}> X</td>
 </tr>
 ))}

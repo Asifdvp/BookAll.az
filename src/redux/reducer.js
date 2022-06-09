@@ -328,6 +328,7 @@ function reducer(state = initialState, action) {
       let good = state.goods.find((elem) => {
         return elem.id === action.payload.id;
       });
+      
       const cart = [...state.cart, good];
       return {
         ...state,
