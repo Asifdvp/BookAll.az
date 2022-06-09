@@ -330,9 +330,7 @@ function reducer(state = initialState, action) {
       let good = state.goods.find((elem) => {
         return elem.id === action.payload.id;
       });
-    
-     
-      const cart = [...state.cart, good];
+   const cart = [...state.cart, good];
         //local storage elave elemek cabalari
       let carts;
       if(localStorage.getItem("carts") === null){
@@ -342,7 +340,7 @@ carts=[];
 carts=JSON.parse(localStorage.getItem("carts"));
       }
       carts.push(good);
-      console.log([...carts])
+     
       localStorage.setItem("carts",JSON.stringify(carts));
      let localCarts = JSON.parse(localStorage.getItem("carts"))
 
@@ -364,18 +362,23 @@ carts=JSON.parse(localStorage.getItem("carts"));
       };
       //sebetden silmek
     case "DELETE_ITEM":
-      let sebet = state.cart.filter((item,index)=>{
+      let sebet = state.localCarts.filter((item,index)=>{
         return index !== action.payload.id
       });
       const newSebet = [...sebet];
-      localStorage.setItem("carts",JSON.stringify(sebet));
+     
+
+
+      
+      localStorage.setItem("carts",JSON.stringify(newSebet));
+      
 let newLocalCarts = JSON.parse(localStorage.getItem("carts"))
 console.log(newLocalCarts)
 
       return{
         ...state,
         cart:newSebet,
-        localCarts:newLocalCarts
+        localCarts:newSebet
       }
      
 
