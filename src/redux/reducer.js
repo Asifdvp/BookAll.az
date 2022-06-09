@@ -343,9 +343,8 @@ function reducer(state = initialState, action) {
         ...state,
         nesr:nesr,
       };
-    case "DELETE_ITEM":
-      let sebet_carts = state.cart;
-console.log(sebet_carts);
+    
+
 
 
     // case "GO_TO_PUBLIC":

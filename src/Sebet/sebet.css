@@ -34,6 +34,8 @@ table {
 tr {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #E8AE1E;
+    padding-bottom: 10px;
 }
 
 .bas {
@@ -91,6 +93,9 @@ th {
 
 .mehsul-say {
     width: 60px !important;
+}
+.mehsul-kod{
+    width: 8%;
 }
 .inputs{
     box-sizing: border-box !important; 

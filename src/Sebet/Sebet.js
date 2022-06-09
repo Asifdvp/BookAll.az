@@ -18,8 +18,10 @@ export default class Sebet extends PureComponent {
  
     }
 
-    deleteItem(e){
-let name = e.target.parentElement.children[1].textContent
+    deleteItem(id,index){
+        console.log(index)
+let name = id.target.parentElement.parentElement.children
+console.log(name)
 store.dispatch({
     type:"DELETE_ITEM",
     payload:{name:name}
@@ -39,6 +41,7 @@ render(){
     <th className='mehsul-text'>Adı </th> 
     <th className='mehsul-qiymet'> Qiymət</th> 
     <th className='mehsul-say'> Say</th> 
+    <th className='mehsul-kod'> Kodu</th> 
     <th className='mehsul-remove'> </th> 
 </tr>
 <tbody>
@@ -58,7 +61,8 @@ render(){
  value={1} disabled/>
 </td>
 
-<td className='mehsul-remove' onClick={(e)=>{this.deleteItem(e)}}> X</td>
+<td className='mehsul-remove' >  { index *564+564}   </td>
+<td className='mehsul-remove' onClick={(item)=>this.deleteItem(item)}> X</td>
 </tr>
 ))}
 </>
@@ -78,9 +82,7 @@ render(){
 
 
 
-<tr className='xettb'> 
-    <td> <hr/></td>
-</tr>
+
 
 
 
